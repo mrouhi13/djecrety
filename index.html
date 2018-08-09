@@ -62,8 +62,11 @@
                     <div class="ui four column centered grid">
                         <h4 class="ui inverted header">About</h4>
                         <p class="ui inverted centered">This is a mini tool to generate SECRET_KEY for
-                            <a href="https://www.djangoproject.com/" target="_blank">Django</a> based projects.</p>
+                            <a href="https://www.djangoproject.com/" target="_blank">Django</a> based projects.
+                            <br>Licensed under a
+                            <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPL v3.0 license</a>.</p>
                         <div class="ui inverted link list horizontal">
+                            <a class="item" id="policy">Policy</a>
                             <a class="item" id="why">Why?</a>
                             <a class="item" id="document">Document</a>
                             <a class="item" id="donate">Donate and Support</a>
@@ -99,6 +102,30 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Modal -->
+        <div class="ui mini modal" id="policyModal">
+            <div class="header">
+                Policy
+            </div>
+            <div class="image content">
+                <div class="description scrolling content">
+                    <p>Djecrety is written using pure Javascript,
+                        <br>CSS and HTML and do not have any back-end code
+                        <br>and database. The keys generate on demand and is
+                        <br>completely random and never store to any file
+                        <br>or database.
+                    </p>
+                    <p>So you can safely use Djecrety.</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui positive right labeled icon button">
+                    Got It!
+                    <i class="checkmark icon"></i>
                 </div>
             </div>
         </div>
@@ -144,7 +171,7 @@
                 How to use?
             </div>
             <div class="image content">
-                <div class="description">
+                <div class="description scrolling content">
                     <p>After create your project:</p>
                     <br>
                     <p style="padding-left: 20px">1. Duplicate your project 'settings.py' file and rename it to 'settings.py.sample'.</p>

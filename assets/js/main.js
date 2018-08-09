@@ -1,5 +1,6 @@
 let input = $('#secretKey');
 let button = $('#generateSecretKey');
+let policy = $('#policy');
 let why = $('#why');
 let doc = $('#document');
 let donate = $('#donate');
@@ -18,10 +19,17 @@ let popupStack = {
     exclusive: true,
 };
 
+policy.click(function () {
+    $('#policyModal').modal('show').modal({
+        transition: 'pulse',
+        closable: true,
+    });
+});
+
 why.click(function () {
     $('#whyModal').modal('show').modal({
         transition: 'pulse',
-        closable: true
+        closable: true,
     });
 });
 
