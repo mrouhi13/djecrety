@@ -111,16 +111,11 @@
             <div class="header">
                 Policy
             </div>
-            <div class="image content">
-                <div class="description scrolling content">
-                    <p>Djecrety is written using pure Javascript,
-                        <br>CSS and HTML and do not have any back-end code
-                        <br>and database. The keys generate on demand and is
-                        <br>completely random and never store to any file
-                        <br>or database.
-                    </p>
-                    <p>So you can safely use Djecrety.</p>
-                </div>
+            <div class="description scrolling content">
+                <p>Djecrety is written using pure Javascript, CSS and HTML and do not have any back-end code and database. The
+                    keys generate on demand and is completely random and never store to any file or database.
+                </p>
+                <p>So you can safely use Djecrety.</p>
             </div>
             <div class="actions">
                 <div class="ui positive right labeled icon button">
@@ -135,27 +130,22 @@
             <div class="header">
                 Why we must change secret key?
             </div>
-            <div class="image content">
-                <div class="description scrolling content">
-                    <p>As
-                        <a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-SECRET_KEY" target="_blank">Django official documentation</a>
-                        says:</p>
-                    <q style="padding-left: 20px; font-style: italic;">A secret key used to provide cryptographic signing, and should be set to a
-                        <br>unique, unpredictable value.
-                    </q>
-                    <br>
-                    <br>
-                    <q style="padding-left: 20px; font-style: italic;">Running Django with a known SECRET_KEY defeats many of Django’s security
-                        <br>protections, and can lead to privilege escalation and remote code execution
-                        <br>vulnerabilities.
-                    </q>
-                    <br>
-                    <br>
-                    <p>So it's
-                        <strong>recommended</strong>: Ignore settings.py file in your commits, change the
-                        <br>secret key on your deploy. If you lost the secret key for any reason or the server
-                        <br>got compromised change it as soon as possible.</p>
-                </div>
+            <div class="description scrolling content">
+                <p>As
+                    <a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-SECRET_KEY" target="_blank">Django official documentation</a>
+                    says:</p>
+                <q style="padding-left: 20px; font-style: italic;">A secret key used to provide cryptographic signing, and should be set to a unique, unpredictable value.
+                </q>
+                <br>
+                <br>
+                <q style="padding-left: 20px; font-style: italic;">Running Django with a known SECRET_KEY defeats many of Django’s security protections, and can lead to privilege
+                    escalation and remote code execution vulnerabilities.
+                </q>
+                <br>
+                <br>
+                <p>So it's
+                    <strong>recommended</strong>: Ignore settings.py file in your commits, change the secret key on your deploy.
+                    If you lost the secret key for any reason or the server got compromised change it as soon as possible.</p>
             </div>
             <div class="actions">
                 <div class="ui positive right labeled icon button">
@@ -170,22 +160,19 @@
             <div class="header">
                 How to use?
             </div>
-            <div class="image content">
-                <div class="description scrolling content">
-                    <p>After create your project:</p>
+            <div class="description scrolling content">
+                <p>After create your project:</p>
+                <br>
+                <p style="padding-left: 20px">1. Duplicate your project 'settings.py' file and rename it to 'settings.py.sample'.</p>
+                <p style="padding-left: 20px">2. Open 'settings.py.sample' file and set empty SECRET_KEY value (line 23).
                     <br>
-                    <p style="padding-left: 20px">1. Duplicate your project 'settings.py' file and rename it to 'settings.py.sample'.</p>
-                    <p style="padding-left: 20px">2. Open 'settings.py.sample' file and set empty SECRET_KEY value (line 23).
-                        <br>
-                        <pre style="padding-left: 50px">SECERET_KEY = ''</pre>
-                    </p>
-                    <p style="padding-left: 20px">3. Add 'settings.py' file to '.gitignore' file. (If git used)</p>
-                    <p style="padding-left: 20px">4. When you want to deploy your project on server (production or test),
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duplicate 'settings.py.sample' file.</p>
-                    <p style="padding-left: 20px">5. Rename duplicated file to 'settings.py'.</p>
-                    <p style="padding-left: 20px">6. Generate a new secret key and set SECRET_KEY value to the new
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secret key in 'settings.py' file.</p>
-                </div>
+                    <pre style="padding-left: 50px">SECERET_KEY = ''</pre>
+                </p>
+                <p style="padding-left: 20px">3. Add 'settings.py' file to '.gitignore' file. (If git used)</p>
+                <p style="padding-left: 20px">4. When you want to deploy your project on server (production or test), duplicate 'settings.py.sample' file.
+                </p>
+                <p style="padding-left: 20px">5. Rename duplicated file to 'settings.py'.</p>
+                <p style="padding-left: 20px">6. Generate a new secret key and set SECRET_KEY value to the new secret key in 'settings.py' file.</p>
             </div>
             <div class="actions">
                 <div class="ui positive right labeled icon button">
