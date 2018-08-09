@@ -56,9 +56,14 @@ h1.ui.header {
 
 @media only screen and (max-width: 823px) {
 
+    .masthead.segment {
+        min-height: 58%;
+        padding: 1em 0;
+    }
+
     .masthead h1.ui.header {
         font-size: 2em;
-        margin-top: 1em;
+        margin-top: 10.em;
     }
 
     .masthead h2 {
@@ -69,13 +74,22 @@ h1.ui.header {
 
 @media only screen and (max-width: 414px) {
 
+    .masthead.segment {
+        min-height: 67%;
+        padding: 1em 0;
+    }
+
     .masthead h1.ui.header {
         font-size: 2em;
-        margin-top: 4.5em;
+        margin-top: 4em;
     }
 
     .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
+    }
+
+    .footer.segment {
+        padding: 2.5em 0 0.5em;
     }
 }
