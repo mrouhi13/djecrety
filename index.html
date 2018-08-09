@@ -58,26 +58,33 @@
                             <a class="item" id="why">Why?</a>
                             <a class="item" id="document">Document</a>
                             <a class="item" id="donate">Donate and Support</a>
-                            <div class="ui fluid popup top left transition hidden">
+                            <div class="ui fliud popup top left transition hidden">
                                 <div class="ui two column divided center aligned grid">
                                     <div class="column">
                                         <h4 class="ui header">Bitcoin</h4>
                                         <img src="assets/images/bitcoin-wallet-qr.png" class="ui centered tiny image" alt="bitcoin">
-                                        <div class="ui hidden divider"></div>
-                                        <div id="bitcoinAddress" class="ui button">Copy</div>
+
+                                        <div id="bitcoinAddress" class="ui button" style="margin-top: 0.5rem">Copy</div>
                                     </div>
                                     <div class="column">
                                         <h4 class="ui header">Ethereum</h4>
                                         <img src="assets/images/ethereum-wallet-qr.png" class="ui centered tiny image" alt="ethereum">
-                                        <div class="ui hidden divider"></div>
-                                        <div id="ethereumAddress" class="ui button">Copy</div>
+
+                                        <div id="ethereumAddress" class="ui button" style="margin-top: 0.5rem">Copy</div>
                                     </div>
                                 </div>
+                                <div class="ui horizontal divider">Or</div>
                                 <div class="ui column divided center aligned grid">
                                     <div class="column">
-                                        <div class="ui horizontal divider">Or</div>
-                                        <p>Just an encouraging email :)</p>
-                                        <a href="mailto:mrouhi13@icloud.com" class="ui button">Email Me</a>
+                                        <p>Just an encouraging message :)</p>
+                                        <div class=" ui medium buttons ">
+                                            <a href="mailto:mrouhi13@gmail.com " class="ui button icon ">
+                                                <i class="envelope icon "></i>
+                                            </a>
+                                            <a href="https://twitter.com/mrouhi13 " class="ui twitter icon button ">
+                                                <i class="twitter icon "></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -88,21 +95,21 @@
         </div>
 
         <!-- Why Modal -->
-        <div class="ui tiny modal" id="whyModal">
-            <div class="header">
+        <div class="ui tiny modal " id="whyModal ">
+            <div class="header ">
                 Why we must change secret key?
             </div>
-            <div class="image content">
-                <div class="description scrolling content">
+            <div class="image content ">
+                <div class="description scrolling content ">
                     <p>As
-                        <a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-SECRET_KEY">Django official documentation</a>
+                        <a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-SECRET_KEY ">Django official documentation</a>
                         says:</p>
-                    <q style="padding-left: 20px; font-style: italic;">A secret key used to provide cryptographic signing, and should be set to a
+                    <q style="padding-left: 20px; font-style: italic; ">A secret key used to provide cryptographic signing, and should be set to a
                         <br>unique, unpredictable value.
                     </q>
                     <br>
                     <br>
-                    <q style="padding-left: 20px; font-style: italic;">Running Django with a known SECRET_KEY defeats many of Django’s security
+                    <q style="padding-left: 20px; font-style: italic; ">Running Django with a known SECRET_KEY defeats many of Django’s security
                         <br>protections, and can lead to privilege escalation and remote code execution
                         <br>vulnerabilities.
                     </q>
@@ -114,49 +121,49 @@
                         <br>got compromised change it as soon as possible.</p>
                 </div>
             </div>
-            <div class="actions">
-                <div class="ui positive right labeled icon button">
+            <div class="actions ">
+                <div class="ui positive right labeled icon button ">
                     Got It!
-                    <i class="checkmark icon"></i>
+                    <i class="checkmark icon "></i>
                 </div>
             </div>
         </div>
 
         <!-- Document Modal -->
-        <div class="ui tiny modal" id="documentModal">
-            <div class="header">
+        <div class="ui tiny modal " id="documentModal ">
+            <div class="header ">
                 How to use?
             </div>
-            <div class="image content">
-                <div class="description">
+            <div class="image content ">
+                <div class="description ">
                     <p>After create your project:</p>
                     <br>
-                    <p style="padding-left: 20px">1. Duplicate your project 'settings.py' file and rename it to 'settings.py.sample'.</p>
-                    <p style="padding-left: 20px">2. Open 'settings.py.sample' file and set empty SECRET_KEY value (line 23).
+                    <p style="padding-left: 20px ">1. Duplicate your project 'settings.py' file and rename it to 'settings.py.sample'.</p>
+                    <p style="padding-left: 20px ">2. Open 'settings.py.sample' file and set empty SECRET_KEY value (line 23).
                         <br>
-                        <pre style="padding-left: 50px">SECERET_KEY = ''</pre>
+                        <pre style="padding-left: 50px ">SECERET_KEY = ''</pre>
                     </p>
-                    <p style="padding-left: 20px">3. Add 'settings.py' file to '.gitignore' file. (If git used)</p>
-                    <p style="padding-left: 20px">4. When you want to deploy your project on server (production or test),
+                    <p style="padding-left: 20px ">3. Add 'settings.py' file to '.gitignore' file. (If git used)</p>
+                    <p style="padding-left: 20px ">4. When you want to deploy your project on server (production or test),
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;duplicate 'settings.py.sample' file.</p>
-                    <p style="padding-left: 20px">5. Rename duplicated file to 'settings.py'.</p>
-                    <p style="padding-left: 20px">6. Generate a new secret key and set SECRET_KEY value
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to the new secret key in 'settings.py' file.</p>
+                    <p style="padding-left: 20px ">5. Rename duplicated file to 'settings.py'.</p>
+                    <p style="padding-left: 20px ">6. Generate a new secret key and set SECRET_KEY value to the new
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secret key in 'settings.py' file.</p>
                 </div>
             </div>
-            <div class="actions">
-                <div class="ui positive right labeled icon button">
+            <div class="actions ">
+                <div class="ui positive right labeled icon button ">
                     Got It!
-                    <i class="checkmark icon"></i>
+                    <i class="checkmark icon "></i>
                 </div>
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-        <script src="assets/vendor/semantic-ui/semantic.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin=" anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js "></script>
+        <script src="assets/vendor/semantic-ui/semantic.min.js "></script>
+        <script src="assets/js/main.js "></script>
 
     </body>
 

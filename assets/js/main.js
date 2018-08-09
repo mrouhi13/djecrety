@@ -38,8 +38,6 @@ donate.popup({
     transition: 'pulse',
     duration: '200',
     hoverable: true,
-    exclusive: true,
-    preserve: true,
 });
 
 input.popup(popupStack);
