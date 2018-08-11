@@ -44,10 +44,10 @@
             </a>
             <div class="ui text container">
                 <h1 class="ui inverted header">Djecrety</h1>
-                <h4>Come on! Don't say that you don't change secret key on deploy?!</h4>
+                <h4>Come on! Don't say you don't change the secret key on deploy?!</h4>
                 <div class="ui fluid large action left icon input">
                     <i class="key icon"></i>
-                    <input id="secretKey" type="text" class="clipboard" style="cursor: pointer" data-clipboard-target="#secretKey" placeholder="Secret Key..."
+                    <input id="secretKey" type="text" class="clipboard" style="cursor: pointer" data-clipboard-target="#secretKey" placeholder="Secret Key"
                         readonly>
                     <button id="generateSecretKey" class="ui button primary clipboard" onclick="generateSecretKey()">Generate
                     </button>
@@ -63,13 +63,12 @@
                         <h4 class="ui inverted header">About</h4>
                         <p class="ui inverted centered">This is a mini tool to generate SECRET_KEY for
                             <a href="https://www.djangoproject.com/" target="_blank">Django</a> based projects.
-                            <br>Licensed under a
-                            <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPL v3.0 license</a>.</p>
+                        </p>
                         <div class="ui inverted link list horizontal">
                             <a class="item" id="policy">Policy</a>
                             <a class="item" id="why">Why?</a>
-                            <a class="item" id="document">Document</a>
-                            <a class="item" id="donate">Donate and Support</a>
+                            <a class="item" id="help">Help</a>
+                            <a class="item" id="support">Support</a>
                             <div class="ui fliud popup top left transition hidden">
                                 <div class="ui two column divided center aligned grid">
                                     <div class="column">
@@ -106,16 +105,16 @@
             </div>
         </div>
 
-        <!-- Document Modal -->
+        <!-- Policy Modal -->
         <div class="ui mini modal" id="policyModal">
             <div class="header">
                 Policy
             </div>
             <div class="description scrolling content">
-                <p>Djecrety is written using pure Javascript, CSS and HTML and do not have any back-end code and database. The
-                    keys generate on demand and is completely random and never store to any file or database.
+                <p>Djecrety is written using pure Javascript, CSS and HTML and don't have any back-end code or database.
+                    <br> The keys generate on demand and it's completely random and never store to any file or database.
                 </p>
-                <p>So you can safely use Djecrety.</p>
+                <p>That's all. So you can safely use Djecrety.</p>
             </div>
             <div class="actions">
                 <div class="ui positive right labeled icon button">
@@ -136,16 +135,17 @@
                     says:</p>
                 <q style="padding-left: 20px; font-style: italic;">A secret key used to provide cryptographic signing, and should be set to a unique, unpredictable value.
                 </q>
-                <br>
+                <br>...
                 <br>
                 <q style="padding-left: 20px; font-style: italic;">Running Django with a known SECRET_KEY defeats many of Django’s security protections, and can lead to privilege
                     escalation and remote code execution vulnerabilities.
                 </q>
                 <br>
                 <br>
-                <p>So it's
-                    <strong>recommended</strong>: Ignore settings.py file in your commits, change the secret key on your deploy.
-                    If you lost the secret key for any reason or the server got compromised change it as soon as possible.</p>
+                <p>So
+                    <strong>recommended</strong>: Keep it safe. Ignore 'settings.py' file in your commits. Change the secret key
+                    on your deploy. If you lost the secret key for any reason or the server got compromised change it as
+                    soon as possible.</p>
             </div>
             <div class="actions">
                 <div class="ui positive right labeled icon button">
@@ -155,21 +155,21 @@
             </div>
         </div>
 
-        <!-- Document Modal -->
-        <div class="ui tiny modal" id="documentModal">
+        <!-- Help Modal -->
+        <div class="ui tiny modal" id="helpModal">
             <div class="header">
                 How to use?
             </div>
             <div class="description scrolling content">
                 <p>After create your project:</p>
-                <br>
                 <p style="padding-left: 20px">1. Duplicate your project 'settings.py' file and rename it to 'settings.py.sample'.</p>
                 <p style="padding-left: 20px">2. Open 'settings.py.sample' file and set empty SECRET_KEY value (line 23).
                     <br>
-                    <pre style="padding-left: 50px">SECERET_KEY = ''</pre>
+                    <pre style="padding-left: 50px">SECRET_KEY = ''</pre>
                 </p>
-                <p style="padding-left: 20px">3. Add 'settings.py' file to '.gitignore' file. (If git used)</p>
-                <p style="padding-left: 20px">4. When you want to deploy your project on server (production or test), duplicate 'settings.py.sample' file.
+                <p style="padding-left: 20px">3. Add 'settings.py' file to '.gitignore' file. (If using git)</p>
+                <p style="padding-left: 20px">4. When you want to deploy your project on the server (production or test), duplicate 'settings.py.sample'
+                    file.
                 </p>
                 <p style="padding-left: 20px">5. Rename duplicated file to 'settings.py'.</p>
                 <p style="padding-left: 20px">6. Generate a new secret key and set SECRET_KEY value to the new secret key in 'settings.py' file.</p>

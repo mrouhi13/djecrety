@@ -2,8 +2,8 @@ let input = $('#secretKey');
 let button = $('#generateSecretKey');
 let policy = $('#policy');
 let why = $('#why');
-let doc = $('#document');
-let donate = $('#donate');
+let help = $('#help');
+let support = $('#support');
 let copyBitcoin = $('#bitcoinAddress');
 let copyEthereum = $('#ethereumAddress');
 let possible = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)';
@@ -33,15 +33,15 @@ why.click(function () {
     });
 });
 
-doc.click(function () {
-    $('#documentModal').modal('show').modal({
+help.click(function () {
+    $('#helpModal').modal('show').modal({
         transition: 'pulse',
         closable: true
     });
 });
 
-donate.popup({
-    target: '#donate',
+support.popup({
+    target: '#support',
     on: 'click',
     transition: 'pulse',
     duration: '200',
