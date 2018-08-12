@@ -1,4 +1,4 @@
-let input = $('#secretKey');
+let secretKey = $('#secretKey');
 let button = $('#generateSecretKey');
 let policy = $('#policy');
 let why = $('#why');
@@ -48,7 +48,7 @@ support.popup({
     hoverable: true,
 });
 
-input.popup(popupStack);
+secretKey.popup(popupStack);
 button.popup({
     position: 'left center',
     target: '.icon.input',
@@ -74,8 +74,8 @@ function generateSecretKey() {
     popupStack.title = 'Copied!';
     popupStack.content = 'Just paste it to settings.';
 
-    input.val(newSecretKey);
-    input.popup(popupStack);
+    secretKey.val(newSecretKey);
+    secretKey.popup(popupStack);
 
     setTimeout(function () {
         new ClipboardJS('.clipboard', {
