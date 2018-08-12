@@ -2,7 +2,7 @@ Djecrety
 ========
 Aug 2018
 
-This is a mini tool to generate SECRET_KEY for Django based projects.
+This is a mini tool to generate random SECRET_KEY for Django based projects.
 
 # Technology
 * Semantic UI, jQuery
