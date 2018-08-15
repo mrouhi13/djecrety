@@ -27,10 +27,106 @@
         <title>Djecrety | Django Secret Key Generator</title>
 
         <link rel="canonical" href="http://djecrety.ir/">
-
-        <!-- Site Properties -->
         <link rel="stylesheet" type="text/css" href="static/vendor/semantic-ui/semantic.min.css">
-        <link rel="stylesheet" type="text/css" href="static/css/style.min.css">
+
+        <style>
+            @font-face {
+                font-family: 'Lalehzar';
+                src: url('../fonts/lalehzar/Lalehzar-Regular.ttf'),
+                url('../fonts/lalehzar/Lalehzar-Regular.ttf') format('truetype')
+            }
+
+            body {
+                background-color: #1b1c1d;
+            }
+
+            h1.ui.header {
+                font-family: Lalehzar, sans-serif;
+            }
+
+            .ui.action.input:not([class*="left action"])>input:focus {
+                border-color: transparent !important;
+            }
+
+            .masthead.segment {
+                min-height: 72%;
+                padding: 1em 0;
+            }
+
+            .masthead .logo.item img {
+                margin-right: 1em;
+            }
+
+            .masthead h1.ui.header {
+                margin-top: 2em;
+                margin-bottom: 0;
+                font-size: 4em;
+                font-weight: normal;
+            }
+
+            .masthead h2 {
+                font-size: 1.7em;
+                font-weight: normal;
+            }
+
+            .ui.vertical.stripe h3 {
+                font-size: 2em;
+            }
+
+            .ui.vertical.stripe .button+h3,
+            .ui.vertical.stripe p+h3 {
+                margin-top: 3em;
+            }
+
+            .ui.vertical.stripe p {
+                font-size: 1.33em;
+            }
+
+            .footer.segment {
+                padding: 4em 0 0.5em;
+            }
+
+            @media only screen and (max-width: 823px) {
+
+                .masthead.segment {
+                    min-height: 58%;
+                    padding: 1em 0;
+                }
+
+                .masthead h1.ui.header {
+                    font-size: 2em;
+                    margin-top: 10.em;
+                }
+
+                .masthead h2 {
+                    margin-top: 0.5em;
+                    font-size: 1.5em;
+                }
+            }
+
+            @media only screen and (max-width: 414px) {
+
+                .masthead.segment {
+                    min-height: 67%;
+                    padding: 1em 0;
+                }
+
+                .masthead h1.ui.header {
+                    font-size: 2em;
+                    margin-top: 4em;
+                }
+
+                .masthead h2 {
+                    margin-top: 0.5em;
+                    font-size: 1.5em;
+                }
+
+                .footer.segment {
+                    padding: 2.5em 0 0.5em;
+                }
+            }
+
+        </style>
     </head>
 
     <body>
@@ -187,8 +283,138 @@
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
         <script src="static/vendor/semantic-ui/semantic.min.js"></script>
-        <script src="static/js/main.min.js"></script>
+        <script>
+            let secretKey = $('#secretKey');
+            let button = $('#generateSecretKey');
+            let policy = $('#policy');
+            let why = $('#why');
+            let help = $('#help');
+            let support = $('#support');
+            let copyBitcoin = $('#bitcoinAddress');
+            let copyEthereum = $('#ethereumAddress');
+            let possible = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)';
+            let popupStack = {
+                position: 'left center',
+                target: '.icon.input',
+                on: 'click',
+                title: 'Click on Generate!',
+                content: '',
+                transition: 'pulse',
+                duration: '200',
+                hoverable: true,
+                exclusive: true,
+            };
 
+            policy.click(function () {
+                $('#policyModal').modal('show').modal({
+                    transition: 'pulse',
+                    closable: true,
+                });
+            });
+
+            why.click(function () {
+                $('#whyModal').modal('show').modal({
+                    transition: 'pulse',
+                    closable: true,
+                });
+            });
+
+            help.click(function () {
+                $('#helpModal').modal('show').modal({
+                    transition: 'pulse',
+                    closable: true
+                });
+            });
+
+            support.popup({
+                target: '#support',
+                on: 'click',
+                transition: 'pulse',
+                duration: '200',
+                hoverable: true,
+            });
+
+            secretKey.popup(popupStack);
+            button.popup({
+                position: 'left center',
+                target: '.icon.input',
+                on: 'click',
+                title: 'Copied!',
+                content: 'Just paste it to settings.',
+                transition: 'pulse',
+                duration: '200',
+                hoverable: true,
+                exclusive: true,
+            });
+
+            $('h1.header').transition('pulse');
+
+            function generateSecretKey() {
+                let newSecretKey = '';
+
+                button.addClass('loading');
+
+                for (let i = 0; i < 50; i++)
+                    newSecretKey += possible.charAt(Math.floor(Math.random() * possible.length));
+
+                popupStack.title = 'Copied!';
+                popupStack.content = 'Just paste it to settings.';
+
+                secretKey.val(newSecretKey);
+                secretKey.popup(popupStack);
+
+                setTimeout(function () {
+                    new ClipboardJS('.clipboard', {
+                        text: function () {
+                            return newSecretKey;
+                        }
+                    });
+
+                    button.removeClass('loading');
+                }, 200);
+            }
+
+            // Copy new secret key to clipboard
+            new ClipboardJS('.clipboard');
+
+            // Copy Bitcoin wallet address to clipboard
+            let bitcoinCp = new ClipboardJS('#bitcoinAddress', {
+                text: function () {
+                    return '1AmdLAaG9YtnMb51n5jCZZ1jV58cNEL7is';
+                }
+            });
+
+            bitcoinCp.on('success', function (e) {
+                copyBitcoin.html('Copied!');
+                copyBitcoin.addClass('positive');
+
+                setTimeout(function () {
+                    copyBitcoin.html('Copy');
+                    copyBitcoin.removeClass('positive');
+                }, 1500);
+
+                e.clearSelection();
+            });
+
+            // Copy Ethereum wallet address to clipboard
+            let ethereumCp = new ClipboardJS('#ethereumAddress', {
+                text: function () {
+                    return '0x76fB3d644A937849d7b660BeDf0558C5e1d85230';
+                }
+            });
+
+            ethereumCp.on('success', function (e) {
+                copyEthereum.html('Copied!');
+                copyEthereum.addClass('positive');
+
+                setTimeout(function () {
+                    copyEthereum.html('Copy');
+                    copyEthereum.removeClass('positive');
+                }, 1500);
+
+                e.clearSelection();
+            });
+        </script>
     </body>
 
 </html>
