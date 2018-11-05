@@ -1,1 +1,87 @@
-@font-face{font-family:'Lalehzar';src:url(../fonts/lalehzar/Lalehzar-Regular.ttf),url(../fonts/lalehzar/Lalehzar-Regular.ttf) format('truetype')}body{background-color:#1b1c1d}h1.ui.header{font-family:Lalehzar,sans-serif}.ui.action.input:not([class*="left action"])>input:focus{border-color:transparent!important}.masthead.segment{min-height:72%;padding:1em 0}.masthead .logo.item img{margin-right:1em}.masthead h1.ui.header{margin-top:2em;margin-bottom:0;font-size:4em;font-weight:400}.masthead h2{font-size:1.7em;font-weight:400}.ui.vertical.stripe h3{font-size:2em}.ui.vertical.stripe .button+h3,.ui.vertical.stripe p+h3{margin-top:3em}.ui.vertical.stripe p{font-size:1.33em}.footer.segment{padding:4em 0 .5em}@media only screen and (max-width:823px){.masthead.segment{min-height:58%;padding:1em 0}.masthead h1.ui.header{font-size:2em;margin-top:1em}.masthead h2{margin-top:.5em;font-size:1.5em}}@media only screen and (max-width:414px){.masthead.segment{min-height:67%;padding:1em 0}.masthead h1.ui.header{font-size:2em;margin-top:4em}.masthead h2{margin-top:.5em;font-size:1.5em}.footer.segment{padding:2.5em 0 .5em}}
+@font-face {
+    font-family: 'Lalehzar';
+    src: url(../fonts/lalehzar/Lalehzar-Regular.ttf), url(../fonts/lalehzar/Lalehzar-Regular.ttf) format('truetype')
+}
+
+body {
+    background-color: #1b1c1d
+}
+
+h1.ui.header {
+    font-family: Lalehzar, sans-serif
+}
+
+.ui.action.input:not([class*="left action"])>input:focus {
+    border-color: transparent!important
+}
+
+.masthead.segment {
+    min-height: 72%;
+    padding: 1em 0
+}
+
+.masthead .logo.item img {
+    margin-right: 1em
+}
+
+.masthead h1.ui.header {
+    margin-top: 2em;
+    margin-bottom: 0;
+    font-size: 4em;
+    font-weight: 400
+}
+
+.masthead h2 {
+    font-size: 1.7em;
+    font-weight: 400
+}
+
+.ui.vertical.stripe h3 {
+    font-size: 2em
+}
+
+.ui.vertical.stripe .button+h3,
+.ui.vertical.stripe p+h3 {
+    margin-top: 3em
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.33em
+}
+
+.footer.segment {
+    padding: 4em 0 .5em
+}
+
+@media only screen and (max-width:823px) {
+    .masthead.segment {
+        min-height: 58%;
+        padding: 1em 0
+    }
+    .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1em
+    }
+    .masthead h2 {
+        margin-top: .5em;
+        font-size: 1.5em
+    }
+}
+
+@media only screen and (max-width:414px) {
+    .masthead.segment {
+        min-height: 67%;
+        padding: 1em 0
+    }
+    .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 4em
+    }
+    .masthead h2 {
+        margin-top: .5em;
+        font-size: 1.5em
+    }
+    .footer.segment {
+        padding: 2.5em 0 .5em
+    }
+}
