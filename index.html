@@ -6,11 +6,11 @@
     <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
     <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name=description
-          content="Djecrety is a Django secret key generator. This is a mini tool to generate random SECRET_KEY for Django based projects. A secret key used to provide cryptographic signing, and should be set to a unique, unpredictable value.">
+          content="Djecrety is a Django secret key generator. This is a mini tool to generate random SECRET_KEY for Django based projects and learn how to change Django SECRET_KEY.">
     <meta name=keywords content="Djecrety,Django,Python,SecretKey,Generator">
     <meta name=robots content="index, nofollow">
     <title>Djecrety | Django Secret Key Generator</title>
-    <link rel=canonical href="http://djecrety.ir">
+    <link rel=canonical href="https://djecrety.ir">
     <link rel=stylesheet type="text/css" href="static/css/default.min.css">
     <!--Favicon -->
     <link rel=apple-touch-icon sizes=180x180 href="static/images/favicon/apple-touch-icon.png">
@@ -24,6 +24,11 @@
     <meta name=msapplication-TileColor content="#2b5797">
     <meta name=msapplication-config content="static/images/favicon/browserconfig.xml">
     <meta name=theme-color content="#ffffff">
+    <!-- Opengraph meta tags -->
+    <meta property="og:title" content="Djecrety"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://djecrety.ir"/>
+    <meta property="og:image" content="https://djecrety.ir/static/images/favicon/favicon.ico"/>
     <!-- Global site tag (gtag.js) - Google Analytics  -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126660701-1"></script>
     <script>
@@ -75,13 +80,15 @@
                         <div class="ui two column divided center aligned grid">
                             <div class=column>
                                 <h4 class="ui header">Bitcoin</h4>
-                                <img src="static/images/bitcoin-wallet-qr.png" width=80 height=80 class="ui centered tiny image"
+                                <img src="static/images/bitcoin-wallet-qr.png" width=80 height=80
+                                     class="ui centered tiny image"
                                      title="Bitcoin Wallet" alt="Bitcoin Wallet">
                                 <div id=bitcoinAddress class="ui button" style="margin-top: 0.5rem">Copy</div>
                             </div>
                             <div class=column>
                                 <h4 class="ui header">Ethereum</h4>
-                                <img src="static/images/ethereum-wallet-qr.png" width=80 height=80 class="ui centered tiny image"
+                                <img src="static/images/ethereum-wallet-qr.png" width=80 height=80
+                                     class="ui centered tiny image"
                                      title="Ethereum Wallet" alt="Ethereum Wallet">
                                 <div id=ethereumAddress class="ui button" style="margin-top: 0.5rem">Copy</div>
                             </div>
@@ -94,7 +101,8 @@
                                     <a href="mailto:mrouhi13@gmail.com" class="ui button icon" title=Email>
                                         <i class="envelope icon"></i>
                                     </a>
-                                    <a href="https://twitter.com/mrouhi13" class="ui twitter icon button" target=_blank title=Twitter>
+                                    <a href="https://twitter.com/mrouhi13" class="ui twitter icon button" target=_blank
+                                       title=Twitter>
                                         <i class="twitter icon"></i>
                                     </a>
                                 </div>
@@ -131,7 +139,8 @@
     </div>
     <div class="description scrolling content">
         <p>As
-            <a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-SECRET_KEY" target=_blank title="Django documents">Django
+            <a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-SECRET_KEY" target=_blank
+               title="Django documents">Django
                 official documentation</a>
             says:</p>
         <q style="padding-left: 20px; font-style: italic;">A secret key used to provide cryptographic signing, and
