@@ -38,6 +38,9 @@ $generateBtn.popup({
     hoverable: !0,
     exclusive: !0,
 });
+$generateBtn.click(function () {
+    getNew();
+});
 $('h1.ui.header').transition('pulse');
 
 function generateNew() {
