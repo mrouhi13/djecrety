@@ -6,7 +6,7 @@ Djecrety
   :target: https://djecrety.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
 
-Django package implementation of Djecrety web tool. Djecrety package provides a command to generate a new secret key for your project and save it to ``settings.py`` file.
+Django package implementation of `Djecrety <https://dejcrety.ir/>`_ web tool. Djecrety package provides a command to generate a new secret key for your project and save it to ``settings.py`` file.
 
 For more details `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_
 
