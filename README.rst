@@ -1,4 +1,6 @@
-[![Documentation Status](https://readthedocs.org/projects/djecrety/badge/?version=latest)](https://djecrety.readthedocs.io/en/latest/?badge=latest)
+.. image:: https://readthedocs.org/projects/djecrety/badge/?version=latest
+:target: https://djecrety.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
 
 =====
 Djecrety
@@ -6,84 +8,22 @@ Djecrety
 
 Django package implementation of Djecrety web tool. Djecrety package provides a command to generate a new secret key for your project and save it to ``settings.py`` file.
 
-For more details `readthdocs <http://djecrety.readthedocs.io/>`_.
+For more details `<http://djecrety.readthedocs.io/>`_.
 
-Getting started
-===============
+Requirements
+============
+To be able to run Djecrety you have to meet following requirements:
 
-Available Commands
--------------------
-
-* djecrety
-
-Supported Python versions
--------------------------
-
-* Python 3.4
-* Python 3.5
-* Python 3.6
-
-Supported Django versions
--------------------------
-
-* Django 1.11
-* Django 2.0
-* Django 2.1
+Python (3.4, 3.5, 3.6)
+Django (1.11, 2.0, 2.1)
+Bear in mind that for Django-2.x you will need at least Python 3.5
 
 Installation
-------------
-
-.. code-block:: bash
-
-    $ pip install -U djecrety
-
-Configuration
--------------
-
-Configure ``INSTALLED_APPS``:
-
-.. code-block:: python
-
-    INSTALLED_APPS = (
-        ...
-        'djecrety',
-        ...
-    )
-
-Usage
 ============
+Simply install using pip:
 
-This is really simple, there is only one command with 3 optional arguments.
-Let's go!
+$ pip install djecrety
 
-``djecrety`` command with no argument, generate and display a new secret key:
-
-.. code-block:: text
-
-    $ ./manage.py dejcrety
-
-With ``-s`` argument, save the generated secret key to ``settings.py`` file:
-
-.. code-block:: text
-
-    $ ./manage.py dejcrety -s
-
-With ``-p`` argument, display the generated secret key when saving on file:
-
-.. note::
-
-    ``-p`` argument work when saving the secret key to file.
-
-.. code-block:: text
-
-    $ ./manage.py dejcrety -sp
-
-With ``-d`` argument, specify settings directory name:
-
-.. note::
-
-    By default, we try to detect your project directory and ``settings.py`` file location, if ``settings.py`` file not in default location you can specify the directory.
-
-.. code-block:: text
-
-    $ ./manage.py dejcrety -sp
+Documentation
+=============
+Documentation is available to study at `<http://djecrety.readthedocs.io/>`_ and in ``docs`` directory.
