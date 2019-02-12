@@ -8,22 +8,26 @@ Djecrety
 
 Django package implementation of Djecrety web tool. Djecrety package provides a command to generate a new secret key for your project and save it to ``settings.py`` file.
 
-For more details `<http://djecrety.readthedocs.io/>`_
+For more details `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_
 
 Requirements
 ============
-To be able to run Djecrety you have to meet following requirements:
+To be able to run **Djecrety** you have to meet following requirements:
 
-Python (3.4, 3.5, 3.6)
-Django (1.11, 2.0, 2.1)
+- Python (3.4, 3.5, 3.6)
+- Django (1.11, 2.0, 2.1)
 Bear in mind that for Django-2.x you will need at least Python 3.5
 
 Installation
 ============
-Simply install using pip:
+Simply install using ``pip``:
 
-$ pip install djecrety
+.. code-block:: bash
+
+    $ pip install djecrety
 
 Documentation
 =============
-Documentation is available to study at `<http://djecrety.readthedocs.io/>`_ and in ``docs`` directory.
+Documentation is available to study at
+`http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_
+and in ``docs`` directory.
