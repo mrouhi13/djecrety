@@ -1,0 +1,41 @@
+Getting started
+===============
+
+Available Commands
+-------------------
+
+* djecrety
+
+Supported Python versions
+-------------------------
+
+* Python 3.4
+* Python 3.5
+* Python 3.6
+
+Supported Django versions
+-------------------------
+
+* Django 1.11
+* Django 2.0
+* Django 2.1
+
+Installation
+------------
+
+.. code-block:: bash
+
+    $ pip install -U djecrety
+
+Configuration
+-------------
+
+Configure ``INSTALLED_APPS``:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        (...),
+        'djecrety',
+        (...),
+    )
