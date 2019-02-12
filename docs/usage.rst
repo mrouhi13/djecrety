@@ -2,6 +2,7 @@ Usage
 ============
 
 This is really simple, there is only one command with 3 optional arguments.
+
 Let's go!
 
 * ``djecrety`` command with no argument, generate and display a new secret key:
