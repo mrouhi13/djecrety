@@ -35,7 +35,7 @@ Configure ``INSTALLED_APPS``:
 .. code-block:: python
 
     INSTALLED_APPS = (
-        (...),
+        ...
         'djecrety',
-        (...),
+        ...
     )
