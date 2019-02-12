@@ -1,4 +1,4 @@
-Sample usage
+Usage
 ============
 
 This is really simple, there is only one command with 3 optional arguments.
