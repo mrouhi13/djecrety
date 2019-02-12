@@ -7,9 +7,10 @@ class Command(BaseCommand):
     help = 'Generate a new secret key with 50 characters length.'
 
     def add_arguments(self, parser):
-        parser.add_argument('-s', '--save', action='store_true', help='Save the generated key to settings.py file.')
+        parser.add_argument('-s', '--save', action='store_true',
+                            help='Save the generated secret key to settings.py file.')
         parser.add_argument('-p', '--print', action='store_true',
-                            help='Display the generated key when saving on file.')
+                            help='Display the generated secret key when saving on file.')
         parser.add_argument('-d', '--settings-dir-name', type=str,
                             help='Specify settings directory name.')
 
