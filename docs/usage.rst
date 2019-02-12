@@ -9,13 +9,13 @@ Let's go!
 
 .. code-block:: text
 
-    $ ./manage.py dejcrety
+    $ ./manage.py djecrety
 
 * With ``-s`` argument, save the generated secret key to ``settings.py`` file:
 
 .. code-block:: text
 
-    $ ./manage.py dejcrety -s
+    $ ./manage.py djecrety -s
 
 * With ``-p`` argument, display the generated secret key when saving on file:
 
@@ -25,7 +25,7 @@ Let's go!
 
 .. code-block:: text
 
-    $ ./manage.py dejcrety -sp
+    $ ./manage.py djecrety -sp
 
 * With ``-d`` argument, specify settings directory name:
 
@@ -35,4 +35,4 @@ Let's go!
 
 .. code-block:: text
 
-    $ ./manage.py dejcrety -sp
+    $ ./manage.py djecrety -sp
