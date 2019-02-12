@@ -11,7 +11,7 @@ Welcome to djecrty's documentation!
 
     introduction
     getting_started
-    sample_usage
+    usage
 
 Indices and tables
 ==================
