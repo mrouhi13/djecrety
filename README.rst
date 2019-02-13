@@ -2,6 +2,9 @@
 Djecrety
 =====
 
+.. image:: https://travis-ci.org/mrouhi13/djecrety.svg?branch=master
+    :target: https://travis-ci.org/mrouhi13/djecrety
+
 .. image:: https://readthedocs.org/projects/djecrety/badge/?version=latest
   :target: https://djecrety.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
