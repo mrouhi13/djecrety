@@ -18,7 +18,7 @@ Requirements
 To be able to run **Djecrety** you have to meet following requirements:
 
 - Python (3.5, 3.6)
-- Django (1.11, 2.0, 2.1)
+- Django (2.0, 2.1, 2.2)
 Bear in mind that for Django-2.x you will need at least Python 3.5
 
 Installation
