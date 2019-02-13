@@ -24,7 +24,7 @@ sys.path.insert(0, BASE_DIR)
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ysmrqyc+x#rpc_vj)19z091ia5n!88zs6$v3%6e+65ht0upk5i'
+SECRET_KEY = '4@k31v4t_apcj*w-(bsvsj9-#^kj!s0ey3exr@n@n)1&n33qet'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,3 +37,13 @@ INSTALLED_APPS = [
 
     'djecrety',
 ]
+
+# Database
+# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
