@@ -5,7 +5,7 @@ from django.conf import settings
 from django.core.management import call_command
 from django.test import TestCase
 
-from utils import generate_secret_key, save_to_settings
+from djecrety.utils import generate_secret_key, save_to_settings
 
 
 class GenerateSecretKeyTests(TestCase):
@@ -71,7 +71,8 @@ class SaveToSettingsTests(TestCase):
         """
         parameter_value = '\'{}\''.format(generate_secret_key())
         parameter_name = 'SECRET_KEY'
-        result, message = save_to_settings(parameter_value, parameter_name)
+        settings_dir_name = 'testproject'
+        result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
         self.assertEqual(message, 'Project secret key updated successfully.')
@@ -82,7 +83,8 @@ class SaveToSettingsTests(TestCase):
         """
         parameter_value = '\'\''
         parameter_name = 'SECRET_KEY'
-        result, message = save_to_settings(parameter_value, parameter_name)
+        settings_dir_name = 'testproject'
+        result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
         self.assertEqual(message, 'Project secret key updated successfully.')
@@ -95,7 +97,8 @@ class SaveToSettingsTests(TestCase):
         """
         parameter_value = None
         parameter_name = 'SECRET_KEY'
-        result, message = save_to_settings(parameter_value, parameter_name)
+        settings_dir_name = 'testproject'
+        result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
         self.assertEqual(message, 'Project secret key updated successfully.')
@@ -107,7 +110,8 @@ class SaveToSettingsTests(TestCase):
         Check passed parameter is successfully update or not.
         """
         parameter_name = 'DEBUG'
-        result, message = save_to_settings(True, parameter_name)
+        settings_dir_name = 'testproject'
+        result, message = save_to_settings(True, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
         self.assertEqual(message, 'Project secret key updated successfully.')
@@ -117,7 +121,8 @@ class SaveToSettingsTests(TestCase):
         Check passed parameter is exist or not.
         """
         parameter_name = 'TEST'
-        result, message = save_to_settings(False, parameter_name)
+        settings_dir_name = 'testproject'
+        result, message = save_to_settings(False, parameter_name, settings_dir_name)
 
         self.assertEqual(result, False)
         self.assertEqual(message, 'Can\'t find passed parameter name. (parameter: {})'.format(parameter_name))
@@ -127,7 +132,8 @@ class SaveToSettingsTests(TestCase):
         Check passed parameter is empty or not.
         """
         parameter_name = ''
-        result, message = save_to_settings(False, parameter_name)
+        settings_dir_name = 'testproject'
+        result, message = save_to_settings(False, parameter_name, settings_dir_name)
 
         self.assertEqual(result, False)
         self.assertEqual(message, 'Can\'t find passed parameter name. (parameter: {})'.format(parameter_name))
@@ -137,7 +143,8 @@ class SaveToSettingsTests(TestCase):
         Check passed parameter is empty or not.
         """
         parameter_name = None
-        result, message = save_to_settings(False, parameter_name)
+        settings_dir_name = 'testproject'
+        result, message = save_to_settings(False, parameter_name, settings_dir_name)
 
         self.assertEqual(result, False)
         self.assertEqual(message, 'Can\'t find passed parameter name. (parameter: {})'.format(parameter_name))
@@ -163,7 +170,7 @@ class SaveToSettingsTests(TestCase):
         """
         parameter_value = '\'{}\''.format(generate_secret_key())
         parameter_name = 'SECRET_KEY'
-        settings_dir_name = '.'
+        settings_dir_name = 'testproject'
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name=settings_dir_name)
 
         self.assertEqual(result, True)
@@ -175,7 +182,7 @@ class SaveToSettingsTests(TestCase):
         """
         parameter_value = '\'{}\''.format(generate_secret_key())
         parameter_name = 'SECRET_KEY'
-        settings_dir_name = ''
+        settings_dir_name = 'testproject'
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name=settings_dir_name)
 
         self.assertEqual(result, True)
@@ -187,7 +194,7 @@ class SaveToSettingsTests(TestCase):
         """
         parameter_value = '\'{}\''.format(generate_secret_key())
         parameter_name = 'SECRET_KEY'
-        settings_dir_name = None
+        settings_dir_name = 'testproject'
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name=settings_dir_name)
 
         self.assertEqual(result, True)
@@ -212,7 +219,7 @@ class CommandsTestCase(TestCase):
         """
         out = StringIO()
         args = ['-s']
-        opts = {}
+        opts = {'settings_dir_name': 'testproject'}
         call_command('djecrety', stdout=out, *args, **opts)
 
         self.assertTrue('Project secret key updated successfully.' in out.getvalue())
@@ -223,7 +230,7 @@ class CommandsTestCase(TestCase):
         """
         out = StringIO()
         args = ['-sp']
-        opts = {}
+        opts = {'settings_dir_name': 'testproject'}
         call_command('djecrety', stdout=out, *args, **opts)
 
         self.assertTrue('SECRET_KEY set to:' in out.getvalue())
