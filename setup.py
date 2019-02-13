@@ -22,7 +22,8 @@ setup(
     classifiers=[
         'Environment :: Command Line Environment',
         'Framework :: Django',
-        'Framework :: Django :: 2.1.5',
+        'Framework :: Django :: 2.1.7',
+        'Framework :: Django :: 1.11.20',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Version 3 License',
         'Operating System :: OS Independent',
