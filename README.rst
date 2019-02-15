@@ -9,7 +9,7 @@ Djecrety
   :target: https://djecrety.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
 
-Django package implementation of `Djecrety <https://djecrety.ir/>`_ web tool. Djecrety package provides a command to generate a new secret key for your project and save it to ``settings.py`` file.
+Djecrety is an implementation of the Django package from a `Web tool <https://djecrety.ir/>`_ with the same name. This package provides a command to generate a new secret key for your project and save it to ``settings.py`` file.
 
 For more details `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_
 
@@ -19,6 +19,7 @@ To be able to run **Djecrety** you have to meet following requirements:
 
 - Python (3.5, 3.6)
 - Django (2.0, 2.1, 2.2)
+
 Bear in mind that for Django-2.x you will need at least Python 3.5
 
 Installation
