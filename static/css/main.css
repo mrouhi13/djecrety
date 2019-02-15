@@ -11,13 +11,41 @@
 }
 
 body {
-    background-color: #1b1c1d;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.masthead.segment {
+li:not(:last-child) {
+    padding-bottom: 0.8em;
+}
+
+q {
+    font-style: italic;
+    padding-left: 1.5em;
+}
+
+.light:not(a) {
+    color: #20252d;
+    background-color: #eef0f2;
+    transition: 0.5s;
+}
+
+.dark:not(a) {
+    color: #fff !important;
+    background-color: #101c29;
+    transition: 0.5s;
+}
+
+.item.dark {
+    color: #adadad !important;
+}
+
+.item.dark:hover {
+    color: #fff !important;
+}
+
+.masthead {
     padding: 1em 0;
 }
 
@@ -25,48 +53,56 @@ body {
     margin-right: 1em;
 }
 
+.masthead .ui.menu {
+    margin-left: 0.5em;
+}
+
 .masthead h1.ui.header {
     margin-top: 1em;
     margin-bottom: 0;
     font-size: 4em;
     font-weight: normal;
-    font-family: Lalehzar, sans-serif;
+    font-family: Lalehzar, serif;
 }
 
 .masthead h2 {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 700;
-    margin-top: 0;
-    margin-bottom: 40px;
     letter-spacing: 5px;
     text-transform: uppercase;
 }
 
-.ui.vertical.stripe h3 {
-    font-size: 2em;
+.masthead p {
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
 
-.ui.vertical.stripe .button + h3,
-.ui.vertical.stripe p + h3 {
-    margin-top: 3em;
+.footer {;
+    margin-top: auto;
 }
 
-.ui.vertical.stripe p {
-    font-size: 1.33em;
+.secondary.pointing.menu .toc.item {
+    display: none;
 }
 
-.item {
-    font-size: 0.9rem !important;
+.ui.secondary.pointing.menu {
+    border: none;
 }
 
-.github-logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 0;
+.ui.grid {
+    margin-bottom: 0;
 }
 
 @media only screen and (max-width: 700px) {
+    .secondary.pointing.menu .item,
+    .secondary.pointing.menu .menu {
+        display: none;
+    }
+
+    .secondary.pointing.menu .toc.item {
+        display: block;
+    }
+
     .masthead h1.ui.header {
         font-size: 3em;
         margin-top: 1.5em;
@@ -74,18 +110,6 @@ body {
 
     .masthead h2 {
         margin-top: 0.5em;
-        letter-spacing: 1px;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .masthead.segment{
-        padding-top: 11em;
-    }
-}
-
-@media only screen and (min-width: 1366px) {
-    .masthead.segment{
-        padding-top: 6em;
+        font-size: 1em;
     }
 }

@@ -9,11 +9,11 @@ let ethereumCp = new ClipboardJS('#ethereumAddress', {
         return '0x76fB3d644A937849d7b660BeDf0558C5e1d85230'
     }
 });
-let $secretKey = $('#secretKey');
-let $generateBtn = $('#generate');
-let $copyBitcoin = $('#bitcoinAddress');
-let $copyEthereum = $('#ethereumAddress');
-let possible = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)';
+const $secretKey = $('#secretKey');
+const $generateBtn = $('#generate');
+const $copyBitcoin = $('#bitcoinAddress');
+const $copyEthereum = $('#ethereumAddress');
+const possible = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)';
 let popupStack = {
     position: 'left center',
     target: '.icon.input',
@@ -41,7 +41,64 @@ $generateBtn.popup({
 $generateBtn.click(function () {
     getNew();
 });
+
+bitcoinCp.on('success', function (e) {
+    $copyBitcoin.html('Copied!');
+    $copyBitcoin.addClass('positive');
+
+    setTimeout(function () {
+        $copyBitcoin.html('Copy');
+        $copyBitcoin.removeClass('positive')
+    }, 1500);
+    e.clearSelection()
+});
+ethereumCp.on('success', function (e) {
+    $copyEthereum.html('Copied!');
+    $copyEthereum.addClass('positive');
+
+    setTimeout(function () {
+        $copyEthereum.html('Copy');
+        $copyEthereum.removeClass('positive')
+    }, 1500);
+    e.clearSelection()
+});
+
 $('h1.ui.header').transition('pulse');
+$('#dark-mode').checkbox({
+    onChecked: function () {
+        $('.light').toggleClass('dark').removeClass('light');
+        $('#github-logo').attr('src', 'static/images/GitHub-Mark-Light-32px.png');
+    },
+    onUnchecked: function () {
+        $('.dark').toggleClass('light').removeClass('dark');
+        $('#github-logo').attr('src', 'static/images/GitHub-Mark-32px.png');
+    }
+});
+$('#policy').click(function () {
+    $('#policyModal').modal('show').modal({
+        transition: 'pulse',
+        closable: !0,
+    })
+});
+$('#why').click(function () {
+    $('#whyModal').modal('show').modal({
+        transition: 'pulse',
+        closable: !0,
+    })
+});
+$('#help').click(function () {
+    $('#helpModal').modal('show').modal({
+        transition: 'pulse',
+        closable: !0
+    })
+});
+$('#support').popup({
+    target: '#support',
+    on: 'click',
+    transition: 'pulse',
+    duration: '200',
+    hoverable: !0,
+});
 
 function generateNew() {
     let newSecretKey = '';
@@ -73,52 +130,3 @@ function getNew() {
         $generateBtn.removeClass('loading')
     }, 200)
 }
-
-bitcoinCp.on('success', function (e) {
-    $copyBitcoin.html('Copied!');
-    $copyBitcoin.addClass('positive');
-
-    setTimeout(function () {
-        $copyBitcoin.html('Copy');
-        $copyBitcoin.removeClass('positive')
-    }, 1500);
-    e.clearSelection()
-});
-
-ethereumCp.on('success', function (e) {
-    $copyEthereum.html('Copied!');
-    $copyEthereum.addClass('positive');
-
-    setTimeout(function () {
-        $copyEthereum.html('Copy');
-        $copyEthereum.removeClass('positive')
-    }, 1500);
-    e.clearSelection()
-});
-
-// Modals
-$('#policy').click(function () {
-    $('#policyModal').modal('show').modal({
-        transition: 'pulse',
-        closable: !0,
-    })
-});
-$('#why').click(function () {
-    $('#whyModal').modal('show').modal({
-        transition: 'pulse',
-        closable: !0,
-    })
-});
-$('#help').click(function () {
-    $('#helpModal').modal('show').modal({
-        transition: 'pulse',
-        closable: !0
-    })
-});
-$('#support').popup({
-    target: '#support',
-    on: 'click',
-    transition: 'pulse',
-    duration: '200',
-    hoverable: !0,
-});
