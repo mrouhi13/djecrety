@@ -27,13 +27,13 @@ q {
 
 .light:not(a) {
     color: #20252d;
-    background-color: #eef0f2;
+    background: #eef0f2;
     transition: 0.5s;
 }
 
 .dark:not(a) {
     color: #fff !important;
-    background-color: #101c29;
+    background: #101c29 !important;
     transition: 0.5s;
 }
 
