@@ -1,126 +1,155 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-    <!--  Standard Meta -->
+    <!-- Standard Meta -->
     <meta charset=UTF-8>
     <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
     <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name=description
-          content="Djecrety is a Django secret key generator. This is a mini tool to generate random SECRET_KEY and learn how to change SECRET_KEY for Django based projects.">
-    <meta name=keywords content="Djecrety,Django,Python,SecretKey,Generator">
+          content="Djecrety is a Django secret key generator. This is a web tool to generate random SECRET_KEY and also have a Django package that you can do this simply with a command.">
+    <meta name=keywords
+          content="Djecrety,Django,Python,SecretKey,Generator,Django secret_key generator, generate django secret key">
     <meta name=robots content="index, nofollow">
+
+    <!-- Site Properties -->
     <title>Djecrety | Django Secret Key Generator</title>
     <link rel=canonical href="https://djecrety.ir">
     <link rel=stylesheet type="text/css" href="static/css/default.min.css">
+
     <!--Favicon -->
-    <link rel=apple-touch-icon sizes=180x180 href="static/images/favicon/apple-touch-icon.png">
-    <link rel=icon type="image/png" sizes=32x32 href="static/images/favicon/favicon-32x32.png">
-    <link rel=icon type="image/png" sizes=16x16 href="static/images/favicon/favicon-16x16.png">
-    <link rel=manifest href="static/images/favicon/site.webmanifest">
-    <link rel=mask-icon href="static/images/favicon/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon/favicon.ico">
+    <link rel=apple-touch-icon sizes=180x180 href="static/images/favicon/apple-touch-icon.png?v=M4mgxLngrm">
+    <link rel=icon type="image/png" sizes=32x32 href="static/images/favicon/favicon-32x32.png?v=M4mgxLngrm">
+    <link rel=icon type="image/png" sizes=16x16 href="static/images/favicon/favicon-16x16.png?v=M4mgxLngrm">
+    <link rel=manifest href="static/images/favicon/site.webmanifest?v=M4mgxLngrm">
+    <link rel=mask-icon href="static/images/favicon/safari-pinned-tab.svg?v=M4mgxLngrm" color="#5bbad5">
+    <link rel="shortcut icon" href="static/images/favicon/favicon.ico?v=M4mgxLngrm">
     <meta name=apple-mobile-web-app-title content=Djecrety>
     <meta name=application-name content=Djecrety>
-    <meta name=msapplication-TileColor content="#2b5797">
-    <meta name=msapplication-config content="static/images/favicon/browserconfig.xml">
-    <meta name=theme-color content="#ffffff">
+    <meta name=msapplication-TileColor content="#eef0f2">
+    <meta name=msapplication-TileImage content="static/images/favicon/mstile-144x144.png?v=M4mgxLngrm">
+    <meta name=msapplication-config content="static/images/favicon/browserconfig.xml?v=M4mgxLngrm">
+    <meta name=theme-color content="#eef0f2">
+
     <!-- Opengraph meta tags -->
     <meta property="og:title" content="Djecrety">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://djecrety.ir">
-    <meta property="og:image" content="https://djecrety.ir/static/images/djecrety-logo.png">
+    <meta property="og:image" content="https://djecrety.ir/static/images/Djecrety-Banner.png">
     <meta property="og:description"
-          content="Djecrety is a Django secret key generator. This is a mini tool to generate random SECRET_KEY and learn how to change SECRET_KEY for Django based projects.">
+          content="Djecrety is a Django secret key generator. This is a web tool to generate random SECRET_KEY and also have a Django package that you can do this simply with a command.">
     <meta property="og:site_name" content="Djecrety">
+
     <!-- Twitter meta tags -->
     <meta name="twitter:card" content="app">
     <meta name="twitter:title" property="twitter:title" content="Djecrety">
     <meta name="twitter:site" content="@mrouhi13">
     <meta name="twitter:creator" content="@mrouhi13">
-    <meta name="twitter:image" property="twitter:image" content="https://djecrety.ir/static/images/djecrety-logo.png">
+    <meta name="twitter:image" property="twitter:image" content="https://djecrety.ir/static/images/Djecrety-Banner.png">
     <meta name="twitter:description" property="twitter:description"
-          content="Djecrety is a Django secret key generator. This is a mini tool to generate random SECRET_KEY and learn how to change SECRET_KEY for Django based projects.">
-    <!-- Global site tag (gtag.js) - Google Analytics  -->
+          content="Djecrety is a Django secret key generator. This is a web tool to generate random SECRET_KEY and also have a Django package that you can do this simply with a command.">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126660701-1"></script>
-    <script>
-        window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
         gtag('js',new Date());gtag('config','UA-126660701-1')
     </script>
 </head>
-<body>
-<div class="ui inverted vertical masthead center aligned segment">
-    <!-- Github Logo -->
-    <div>
-        <a href="https://github.com/mrouhi13/djecrety" target=_blank title="Github Repository" itemprop="url">
-            <img class="github-logo" src="static/images/github-logo.svg" width="80" height="80" alt="Github Repository"
-                 title="Github Repository">
+<body class="light">
+<!-- Page Contents -->
+<div class="ui vertical masthead center aligned container" itemscope itemtype="https://schema.org/CreativeWork">
+    <div class="ui large secondary pointing menu">
+        <a class="toc item">
+            <img class="ui image" src="static/images/Djecrety-Logo-24px.png" width=24 height=24 title=Djecrety
+                 alt=Djecrety>
         </a>
+        <div class="item">
+            <div class="ui logo shape">
+                <div class="sides">
+                    <div class="active ui side">
+                        <a href="/" title="Djecrety">
+                            <img class="ui image" src="static/images/Djecrety-Logo-35px.png" width=35 height=35
+                                 title=Djecrety alt=Djecrety>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right item">
+            <div id="dark-mode" class="ui toggle checkbox">
+                <input type="checkbox">
+                <label><i class="moon outline icon light" style="font-size:1.2em"></i></label>
+            </div>
+        </div>
     </div>
-    <!-- Page Contents -->
-    <div class="ui text container" itemscope itemtype="https://schema.org/CreativeWork">
-        <h1 class="ui inverted header" itemprop=title>Djecrety</h1>
+    <div class="ui text container">
+        <h1 class="ui header light" itemprop=title>
+            Djecrety
+        </h1>
         <h2>Django Secret Key Generator</h2>
         <div class="ui fluid large action left icon input" itemprop=content>
             <i class="key icon"></i>
-            <input id=secretKey class=clipboard style="cursor: pointer" data-clipboard-target="#secretKey"
+            <input id=secretKey class=clipboard style="cursor:pointer" data-clipboard-target="#secretKey"
                    placeholder="Secret Key" readonly>
             <button id=generate class="ui button primary clipboard">Generate</button>
         </div>
-        <div class="ui inverted masthead segment" itemprop=content>
-            <p class="">Install and use Djecrety package!
-                <a href="http://djecrety.readthedocs.io/" target=_blank title=Django>Documentation</a>
-            </p>
-        </div>
+        <p itemprop=content>
+            <i class="outline star icon" style="color:#feda44"></i>
+            Djecrety package also is available,
+            <a href="http://djecrety.readthedocs.io/" target=_blank title="Djecrety Documents">read the docs</a>!
+        </p>
     </div>
 </div>
-<footer class="ui inverted vertical footer segment">
-    <div class="ui container">
-        <div class="ui stackable inverted divided equal height grid">
-            <div class="ui four column centered grid">
-                <h4 class="ui inverted header">About</h4>
-                <p class="ui inverted centered">This is a mini tool to generate random SECRET_KEY for
-                    <a href="https://www.djangoproject.com/" target=_blank title=Django>Django</a> based projects.
-                </p>
-                <div class="ui inverted link list horizontal">
-                    <a class=item id=policy title=Policy>Policy</a>
-                    <a class=item id=why title=Why?>Why?</a>
-                    <a class=item id=help title=Help>Help</a>
-                    <a class=item id=support title="">Support</a>
-                    <div class="ui fliud popup top left transition hidden">
-                        <div class="ui two column divided center aligned grid">
-                            <div class=column>
-                                <h4 class="ui header">Bitcoin</h4>
-                                <img src="static/images/bitcoin-wallet-qr.png" width=80 height=80
-                                     class="ui centered tiny image"
-                                     title="Bitcoin Wallet" alt="Bitcoin Wallet">
-                                <div id=bitcoinAddress class="ui button" style="margin-top: 0.5rem">Copy</div>
-                            </div>
-                            <div class=column>
-                                <h4 class="ui header">Ethereum</h4>
-                                <img src="static/images/ethereum-wallet-qr.png" width=80 height=80
-                                     class="ui centered tiny image"
-                                     title="Ethereum Wallet" alt="Ethereum Wallet">
-                                <div id=ethereumAddress class="ui button" style="margin-top: 0.5rem">Copy</div>
-                            </div>
+<footer class="ui footer container">
+    <div class="ui grid">
+        <div class="left floated left aligned twelve wide column" style="padding-top:1.3em;padding-left:2em">
+            <div class="ui link list horizontal">
+                <a class="item light" id=policy title=Policy>Policy</a>
+                <a class="item light" id=why title=Why?>Why?</a>
+                <a class="item light" id=help title=Help>Help</a>
+                <a class="item light" id=support title="">Support</a>
+                <!-- Support -->
+                <div class="ui fliud popup top left transition hidden">
+                    <div class="ui two column divided center aligned grid">
+                        <div class=column>
+                            <h4 class="ui header">Bitcoin</h4>
+                            <img src="static/images/bitcoin-wallet-qr.png" width=80 height=80
+                                 class="ui centered tiny image"
+                                 title="Bitcoin Wallet" alt="Bitcoin Wallet">
+                            <div id=bitcoinAddress class="ui button" style="margin:0.5em 0 0">Copy</div>
                         </div>
-                        <div class="ui horizontal divider">Or</div>
-                        <div class="ui column divided center aligned grid">
-                            <div class=column>
-                                <p>Just an encouraging message :)</p>
-                                <div class=" ui medium buttons">
-                                    <a href="mailto:mrouhi13@gmail.com" class="ui button icon" title=Email>
-                                        <i class="envelope icon"></i>
-                                    </a>
-                                    <a href="https://twitter.com/mrouhi13" class="ui twitter icon button" target=_blank
-                                       title=Twitter>
-                                        <i class="twitter icon"></i>
-                                    </a>
-                                </div>
+                        <div class=column>
+                            <h4 class="ui header">Ethereum</h4>
+                            <img src="static/images/ethereum-wallet-qr.png" width=80 height=80
+                                 class="ui centered tiny image"
+                                 title="Ethereum Wallet" alt="Ethereum Wallet">
+                            <div id=ethereumAddress class="ui button" style="margin:0.5em 0 0">Copy</div>
+                        </div>
+                    </div>
+                    <div class="ui horizontal divider">Or</div>
+                    <div class="ui column divided center aligned grid">
+                        <div class=column>
+                            <p>Just an encouraging message :)</p>
+                            <div class=" ui medium buttons">
+                                <a href="mailto:mrouhi13@gmail.com" class="ui button icon" title=Email>
+                                    <i class="envelope icon"></i>
+                                </a>
+                                <a href="https://twitter.com/mrouhi13" class="ui twitter icon button"
+                                   target=_blank
+                                   title=Twitter>
+                                    <i class="twitter icon"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="right floated right aligned four wide column" style="padding-right:2em">
+            <a href="https://github.com/mrouhi13/djecrety" target=_blank title="Github Repository" itemprop=url>
+                <img id="github-logo" src="static/images/GitHub-Mark-32px.png" width=32 height=32
+                     alt="Github Repository"
+                     title="Github Repository">
+            </a>
         </div>
     </div>
 </footer>
@@ -153,17 +182,15 @@
                title="Django documents">Django
                 official documentation</a>
             says:</p>
-        <q style="padding-left: 20px; font-style: italic;">A secret key used to provide cryptographic signing, and
+        <q>A secret key used to provide cryptographic signing, and
             should be set to a unique, unpredictable value.
         </q>
-        <br>...
-        <br>
-        <q style="padding-left: 20px; font-style: italic;">Running Django with a known SECRET_KEY defeats many of
+        <br>...<br>
+        <q>Running Django with a known SECRET_KEY defeats many of
             Django’s security protections, and can lead to privilege
             escalation and remote code execution vulnerabilities.
         </q>
-        <br>
-        <br>
+        <br><br>
         <p>So
             <strong>recommended</strong>: Keep it safe. Ignore 'settings.py' file in your commits. Change the secret key
             on your deploy. If you lost the secret key for any reason or the server got compromised change it as
@@ -183,18 +210,23 @@
     </div>
     <div class="description scrolling content">
         <p>After creating your project:</p>
-        <p style="padding-left: 20px">1. Duplicate your project 'settings.py' file and rename it to
-            'settings.py.sample'.</p>
-        <p style="padding-left: 20px">2. Open 'settings.py.sample' file and set empty SECRET_KEY value (line 23).</p>
-        <pre style="padding-left: 50px">SECRET_KEY = ''</pre>
-        <p style="padding-left: 20px">3. Add 'settings.py' file to '.gitignore' file. (If using git)</p>
-        <p style="padding-left: 20px">4. When you want to deploy your project on the server (production or test),
-            duplicate 'settings.py.sample'
-            file.
-        </p>
-        <p style="padding-left: 20px">5. Rename duplicated file to 'settings.py'.</p>
-        <p style="padding-left: 20px">6. Set SECRET_KEY value to the new secret key generated with Djecrety in
-            'settings.py' file.</p>
+        <ol>
+            <li>Duplicate your project 'settings.py' file and rename it to
+                'settings.py.sample'.
+            </li>
+            <li>Open 'settings.py.sample' file and set SECRET_KEY value empty (line 23).
+                <pre>SECRET_KEY = ''</pre>
+            </li>
+            <li>Add 'settings.py' file to '.gitignore' file. (If using git)</li>
+            <li>When you want to deploy your project on the server (production or test),
+                duplicate 'settings.py.sample'
+                file.
+            </li>
+            <li>Rename duplicated file to 'settings.py'.</li>
+            <li>Set SECRET_KEY value to the new secret key generated with Djecrety in
+                'settings.py' file.
+            </li>
+        </ol>
     </div>
     <div class=actions>
         <div class="ui positive right labeled icon button">
@@ -203,6 +235,7 @@
         </div>
     </div>
 </div>
+
 <script src="static/js/default.min.js"></script>
 </body>
 </html>
