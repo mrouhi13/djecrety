@@ -67,11 +67,11 @@ $('h1.ui.header').transition('pulse');
 $('#dark-mode').checkbox({
     onChecked: function () {
         $('.light').toggleClass('dark').removeClass('light');
-        $('#github-logo').attr('src', 'static/images/GitHub-Mark-Light-32px.png');
+        $('#github-logo').attr('src', 'static/images/v.svg');
     },
     onUnchecked: function () {
         $('.dark').toggleClass('light').removeClass('dark');
-        $('#github-logo').attr('src', 'static/images/GitHub-Mark-32px.png');
+        $('#github-logo').attr('src', 'static/images/gitHub-mark-dark.svg');
     }
 });
 $('#policy').click(function () {
