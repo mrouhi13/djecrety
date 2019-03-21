@@ -92,8 +92,8 @@ $('#help').click(function () {
         closable: !0
     })
 });
-$('#support').popup({
-    target: '#support',
+$('#supportme').popup({
+    target: '#supportme',
     on: 'click',
     transition: 'pulse',
     duration: '200',
@@ -103,8 +103,9 @@ $('#support').popup({
 function generateNew() {
     let newSecretKey = '';
 
-    for (let i = 0; i < 50; i++)
+    for (let i = 0; i < 50; i++) {
         newSecretKey += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
 
     return newSecretKey;
 }
