@@ -69,13 +69,13 @@ class SaveToSettingsTests(TestCase):
         """
         Check value has been updated or not.
         """
-        parameter_value = '\'{}\''.format(generate_secret_key())
+        parameter_value = f'\'{generate_secret_key()}\''
         parameter_name = 'SECRET_KEY'
         settings_dir_name = 'testproject'
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
-        self.assertEqual(message, 'Project secret key updated successfully.')
+        self.assertEqual(message, f'{parameter_name} updated successfully.')
 
     def test_with_empty_parameter_value(self):
         """
@@ -87,7 +87,7 @@ class SaveToSettingsTests(TestCase):
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
-        self.assertEqual(message, 'Project secret key updated successfully.')
+        self.assertEqual(message, f'{parameter_name} updated successfully.')
 
         self.test_with_parameter_value_with_defaults()
 
@@ -101,7 +101,7 @@ class SaveToSettingsTests(TestCase):
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
-        self.assertEqual(message, 'Project secret key updated successfully.')
+        self.assertEqual(message, f'{parameter_name} updated successfully.')
 
         self.test_with_parameter_value_with_defaults()
 
@@ -114,7 +114,7 @@ class SaveToSettingsTests(TestCase):
         result, message = save_to_settings(True, parameter_name, settings_dir_name)
 
         self.assertEqual(result, True)
-        self.assertEqual(message, 'Project secret key updated successfully.')
+        self.assertEqual(message, f'{parameter_name} updated successfully.')
 
     def test_with_incorrect_parameter_name(self):
         """
@@ -125,7 +125,7 @@ class SaveToSettingsTests(TestCase):
         result, message = save_to_settings(False, parameter_name, settings_dir_name)
 
         self.assertEqual(result, False)
-        self.assertEqual(message, 'Can\'t find passed parameter name. (parameter: {})'.format(parameter_name))
+        self.assertEqual(message, f'Can\'t find passed parameter name. (parameter: {parameter_name})')
 
     def test_with_empty_parameter_name(self):
         """
@@ -136,7 +136,7 @@ class SaveToSettingsTests(TestCase):
         result, message = save_to_settings(False, parameter_name, settings_dir_name)
 
         self.assertEqual(result, False)
-        self.assertEqual(message, 'Can\'t find passed parameter name. (parameter: {})'.format(parameter_name))
+        self.assertEqual(message, f'Can\'t find passed parameter name. (parameter: {parameter_name})')
 
     def test_with_None_parameter_name(self):
         """
@@ -147,13 +147,13 @@ class SaveToSettingsTests(TestCase):
         result, message = save_to_settings(False, parameter_name, settings_dir_name)
 
         self.assertEqual(result, False)
-        self.assertEqual(message, 'Can\'t find passed parameter name. (parameter: {})'.format(parameter_name))
+        self.assertEqual(message, f'Can\'t find passed parameter name. (parameter: {parameter_name})')
 
     def test_with_incorrect_settings_dir_name(self):
         """
         Check passed settings dir name is exist or not.
         """
-        parameter_value = '\'{}\''.format(generate_secret_key())
+        parameter_value = f'\'{generate_secret_key()}\''
         parameter_name = 'SECRET_KEY'
         settings_dir_name = 'test'
         settings_dir = os.path.join(settings.BASE_DIR, settings_dir_name, 'settings.py')
@@ -161,44 +161,44 @@ class SaveToSettingsTests(TestCase):
 
         self.assertEqual(result, False)
         self.assertEqual(message,
-                         'Not found: {}\n\nCan\'t find \'settings.py\' file,'
-                         ' please specify settings file directory name using -p argument.'.format(settings_dir))
+                         f'Not found: {settings_dir}\n\nCan\'t find \'settings.py\' file,'
+                         ' please specify settings file directory name using -p argument.')
 
     def test_with_correct_settings_dir_name(self):
         """
         Check passed settings dir name is exist or not.
         """
-        parameter_value = '\'{}\''.format(generate_secret_key())
+        parameter_value = f'\'{generate_secret_key()}\''
         parameter_name = 'SECRET_KEY'
         settings_dir_name = 'testproject'
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name=settings_dir_name)
 
         self.assertEqual(result, True)
-        self.assertEqual(message, 'Project secret key updated successfully.')
+        self.assertEqual(message, f'{parameter_name} updated successfully.')
 
     def test_with_empty_settings_dir_name(self):
         """
         Check passed settings dir name is empty or not.
         """
-        parameter_value = '\'{}\''.format(generate_secret_key())
+        parameter_value = f'\'{generate_secret_key()}\''
         parameter_name = 'SECRET_KEY'
         settings_dir_name = 'testproject'
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name=settings_dir_name)
 
         self.assertEqual(result, True)
-        self.assertEqual(message, 'Project secret key updated successfully.')
+        self.assertEqual(message, f'{parameter_name} updated successfully.')
 
     def test_with_none_settings_dir_name(self):
         """
         Check passed settings dir name is empty or not.
         """
-        parameter_value = '\'{}\''.format(generate_secret_key())
+        parameter_value = f'\'{generate_secret_key()}\''
         parameter_name = 'SECRET_KEY'
         settings_dir_name = 'testproject'
         result, message = save_to_settings(parameter_value, parameter_name, settings_dir_name=settings_dir_name)
 
         self.assertEqual(result, True)
-        self.assertEqual(message, 'Project secret key updated successfully.')
+        self.assertEqual(message, f'{parameter_name} updated successfully.')
 
 
 class CommandsTestCase(TestCase):
@@ -222,7 +222,7 @@ class CommandsTestCase(TestCase):
         opts = {'settings_dir_name': 'testproject'}
         call_command('djecrety', stdout=out, *args, **opts)
 
-        self.assertTrue('Project secret key updated successfully.' in out.getvalue())
+        self.assertTrue('SECRET_KEY updated successfully.' in out.getvalue())
 
     def test_djecrety_with_save_and_display_arg(self):
         """
