@@ -5,7 +5,6 @@ verify_ssl = true
 
 [dev-packages]
 coverage = "*"
-tox = "*"
 twine = "*"
 codecov = "*"
 
