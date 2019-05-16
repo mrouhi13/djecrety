@@ -18,7 +18,7 @@ setup(
     description='Djecrety package provides a command to generate a new secret key for your project and \
                 save it to settings.py file.',
     long_description=long_description,
-    long_description_content_type="text/markdown",
+    long_description_content_type='text/x-rst',
     url='https://djecrety.ir/',
     author='Majid Rouhi',
     author_email='mrouhi13@gmail.com',
