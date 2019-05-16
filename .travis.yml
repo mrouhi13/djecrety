@@ -17,6 +17,6 @@ env:
 install: make setup
 
 # command to run tests
-script: tox
+script: pipenv run -- tox
 
-after_success: codecov
+after_success: pipenv run -- codecov
