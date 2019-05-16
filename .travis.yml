@@ -1,4 +1,4 @@
-dist: bionic
+dist: xenial
 language: python
 notifications:
   email: false
@@ -17,6 +17,6 @@ env:
 install: make setup
 
 # command to run tests
-script: make test
+script: tox
 
 after_success: codecov
