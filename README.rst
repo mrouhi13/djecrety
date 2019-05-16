@@ -2,6 +2,9 @@
 Djecrety
 =====
 
+.. image:: https://img.shields.io/pypi/v/djecrety.svg
+  :target: https://pypi.org/project/djecrety
+
 .. image:: https://travis-ci.org/mrouhi13/djecrety.svg?branch=master
     :target: https://travis-ci.org/mrouhi13/djecrety
 
