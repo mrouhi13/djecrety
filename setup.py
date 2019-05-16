@@ -11,14 +11,21 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='djecrety',
     version='1.0.1',
-    packages=find_packages(exclude=('testproject',)),
+    python_requires='>=3.5',
+    packages=find_packages(exclude=['testproject']),
     include_package_data=True,
     license='GNU Version 3 License',
-    description='Djecrety package provides a command to generate a new secret key for your project and save it to settings.py file.',
+    description='Djecrety package provides a command to generate a new secret key for your project and'
+                'save it to settings.py file.',
     long_description=README,
     url='https://djecrety.ir/',
     author='Majid Rouhi',
     author_email='mrouhi13@gmail.com',
+    zip_safe=False,
+    install_requires=[
+        'Django>=2.0',
+        'pytz==2019.1'
+    ],
     classifiers=[
         'Environment :: Console',
         'Framework :: Django',
