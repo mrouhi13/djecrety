@@ -5,6 +5,8 @@ verify_ssl = true
 
 [dev-packages]
 coverage = "*"
+tox = "*"
+twine = "*"
 
 [packages]
 django = "==2.2"
