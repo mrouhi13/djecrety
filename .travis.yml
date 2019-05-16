@@ -14,7 +14,9 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
 
 # command to install dependencies
-install: make setup
+install:
+  - travis_retry pip install -U tox-travis
+  - make setup
 
 # command to run tests
 script: pipenv run -- tox
