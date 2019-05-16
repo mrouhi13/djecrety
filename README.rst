@@ -1,6 +1,4 @@
-=====
-Djecrety
-=====
+# Djecrety
 
 .. image:: https://img.shields.io/pypi/v/djecrety.svg
   :target: https://pypi.org/project/djecrety
