@@ -1,5 +1,5 @@
 =====
-About
+Djecrety
 =====
 
 .. image:: https://travis-ci.org/mrouhi13/djecrety.svg?branch=master
