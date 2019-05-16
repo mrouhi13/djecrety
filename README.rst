@@ -9,6 +9,9 @@ Djecrety
   :target: https://djecrety.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
 
+.. image:: https://codecov.io/gh/mrouhi13/djecrety/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/mrouhi13/djecrety
+
 Djecrety is an implementation of the Django package from a `Web tool <https://djecrety.ir/>`_ with the same name. This package provides a command to generate a new secret key for your project and save it to ``settings.py`` file.
 
 For more details `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_
