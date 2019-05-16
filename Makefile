@@ -13,7 +13,7 @@ build:
 	twine check dist/*
 
 upload:
-	twine check dist/*
+	twine upload dist/*
 	rm -dr build/ dist/ *.egg-info
 
 setup:
