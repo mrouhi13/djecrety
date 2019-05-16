@@ -24,8 +24,7 @@ setup(
     author_email='mrouhi13@gmail.com',
     zip_safe=False,
     install_requires=[
-        'Django>=2.0',
-        'pytz==2019.1'
+        'Django>=2.0'
     ],
     classifiers=[
         'Environment :: Console',
