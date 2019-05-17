@@ -1,7 +1,5 @@
 dist: xenial
 language: python
-notifications:
-  email: false
 sudo: false
 python:
   - '3.5'
@@ -16,9 +14,9 @@ env:
 # command to install dependencies
 install:
   - travis_retry pip install -U tox-travis
-  - make setup
+  - make init
 
 # command to run tests
-script: pipenv run -- tox
+script: pipenv run tox
 
-after_success: pipenv run -- codecov
+after_success: pipenv run codecov
