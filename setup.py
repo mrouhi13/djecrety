@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='djecrety',
-    version='1.0.5',
+    version='1.0.6',
     python_requires='>=3.5',
     packages=find_packages(exclude=['testproject']),
     include_package_data=True,
@@ -38,6 +38,7 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Security :: Cryptography',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities'
