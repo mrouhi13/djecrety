@@ -17,6 +17,6 @@ install:
   - make init
 
 # command to run tests
-script: pipenv run tox
+script: pipenv run tox -v
 
 after_success: pipenv run codecov
