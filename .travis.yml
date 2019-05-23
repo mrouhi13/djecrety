@@ -14,8 +14,10 @@ env:
 # command to install dependencies
 install:
   - travis_retry pip install -U tox-travis
-  - make init
-  - make setup
+
+before_script:
+    - make init
+    - make setup
 
 # command to run tests
 script: pipenv run tox -v
