@@ -9,8 +9,8 @@ twine = "*"
 codecov = "*"
 
 [packages]
-django = "==2.2"
-pytz = "==2019.1"
+django = "*"
+pytz = "*"
 
 [requires]
 python_version = "3.6"
