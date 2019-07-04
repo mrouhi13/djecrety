@@ -36,4 +36,4 @@ Simply install using ``pip``:
 
 Documentation
 =============
-Documentation is available `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_.
+Documentation is available on `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_.
