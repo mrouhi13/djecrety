@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='djecrety',
-    version='1.0.6',
+    version='1.0.7',
     python_requires='>=3.5',
     packages=find_packages(exclude=['testproject']),
     include_package_data=True,

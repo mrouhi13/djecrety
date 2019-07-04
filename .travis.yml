@@ -11,6 +11,7 @@ env:
     - PIPENV_VENV_IN_PROJECT=1
     - PIPENV_IGNORE_VIRTUALENVS=1
     - PIPENV_VERBOSITY=-1
+    - SECRET_KEY=_
 
 # command to install dependencies
 install:
