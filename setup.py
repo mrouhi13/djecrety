@@ -2,6 +2,8 @@ import os
 
 from setuptools import find_packages, setup
 
+version = __import__('djecrety').__version__
+
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     long_description = readme.read()
 
@@ -10,7 +12,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='djecrety',
-    version='1.0.7',
+    version=version,
     python_requires='>=3.5',
     packages=find_packages(exclude=['testproject']),
     include_package_data=True,
