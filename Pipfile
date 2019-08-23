@@ -10,7 +10,6 @@ codecov = "*"
 
 [packages]
 django = "*"
-pytz = "*"
 
 [requires]
 python_version = "3.6"

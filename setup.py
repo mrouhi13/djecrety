@@ -17,8 +17,8 @@ setup(
     packages=find_packages(exclude=['testproject']),
     include_package_data=True,
     license='GNU Version 3 License',
-    description='Djecrety package provides a command to generate a new secret key for your project and \
-                save it to settings.py file.',
+    description='Djecrety package provides a command to generate a new secret '
+                'key for your project and save it to settings.py file.',
     long_description=long_description,
     long_description_content_type='text/x-rst',
     url='https://djecrety.ir/',
@@ -44,5 +44,5 @@ setup(
         'Topic :: Security :: Cryptography',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities'
-    ],
+    ]
 )

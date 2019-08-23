@@ -34,5 +34,4 @@ test:
 	pipenv run coverage run ./manage.py test
 	pipenv run coverage report
 
-
 .PHONY: help activate test
