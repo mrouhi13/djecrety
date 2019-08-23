@@ -19,7 +19,6 @@ Supported Django versions
 * Django 2.0
 * Django 2.1
 * Django 2.2
-* Django 2.3
 
 Installation
 ------------

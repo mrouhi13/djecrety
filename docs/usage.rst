@@ -17,11 +17,11 @@ Let's go!
 
     $ ./manage.py djecrety -s
 
-* With ``-p`` argument, display the generated secret key when saving to the file:
+* With ``-p`` argument, display the generated secret key while saving to the file:
 
 .. note::
 
-    ``-p`` argument work when saving the secret key to the file.
+    ``-p`` argument work with ``-s`` argument.
 
 .. code-block:: text
 
@@ -31,7 +31,7 @@ Let's go!
 
 .. note::
 
-    By default, we try to detect your project directory and ``settings.py`` location, if ``settings.py`` not in default location you can specify the directory.
+    By default, Djecrety try to detect your project directory and ``settings.py`` location, if ``settings.py`` not in default location you can specify the directory.
 
 .. code-block:: text
 
