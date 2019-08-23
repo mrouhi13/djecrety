@@ -17,11 +17,9 @@ class Command(BaseCommand):
                             help='Specify `settings.py` directory name.')
 
     def handle(self, *args, **kwargs):
-        parameter_value = ''
         parameter_name = 'SECRET_KEY'
-        if parameter_name == 'SECRET_KEY':
-            new_key = generate_secret_key()
-            parameter_value = new_key
+        new_key = generate_secret_key()
+        parameter_value = new_key
 
         if kwargs['save']:
             settings_dir_name = kwargs['settings_dir_name']
@@ -35,9 +33,7 @@ class Command(BaseCommand):
                         self.style.SUCCESS(f'{parameter_name} set to:'),
                         parameter_value))
                 self._print_tips()
-            except FileNotFoundError as e:
-                self.stdout.write(self.style.ERROR(e.__str__()))
-            except NameError as e:
+            except (FileNotFoundError, NameError) as e:
                 self.stdout.write(self.style.ERROR(e.__str__()))
         else:
             self.stdout.write('{} {}'.format(
