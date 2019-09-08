@@ -86,8 +86,8 @@ $('#why').click(function () {
         closable: !0,
     })
 });
-$('#help').click(function () {
-    $('#helpModal').modal('show').modal({
+$('#bestpractice').click(function () {
+    $('#bestpracticeModal').modal('show').modal({
         transition: 'pulse',
         closable: !0
     })

@@ -93,6 +93,35 @@ q {
     margin-bottom: 0;
 }
 
+pre {
+    margin: 1rem 0;
+    padding: 1rem;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto !important;
+    font-size: 11px;
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 3px;
+}
+
+code {
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 3px;
+    line-height: 22px;
+    font-size: 11px;
+    padding: 3px;
+    color: #3a3a3a;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
 @media only screen and (max-width: 700px) {
     .secondary.pointing.menu .item,
     .secondary.pointing.menu .menu {
