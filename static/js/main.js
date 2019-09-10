@@ -86,21 +86,21 @@ $('#why').click(function () {
         closable: !0,
     })
 });
-$('#bestpractice').click(function () {
-    $('#bestpracticeModal').modal('show').modal({
+$('#help').click(function () {
+    $('#helpModal').modal('show').modal({
         transition: 'pulse',
         closable: !0
     })
 });
-$('#supportme').popup({
-    target: '#supportme',
+$('#donate').popup({
+    target: '#donate',
     on: 'click',
     transition: 'pulse',
     duration: '200',
     hoverable: !0,
 });
 
-function generateNew() {
+function generateKey() {
     let newSecretKey = '';
 
     for (let i = 0; i < 50; i++) {
@@ -113,7 +113,7 @@ function generateNew() {
 function getNew() {
     $generateBtn.addClass('loading');
 
-    let newSecretKey = generateNew();
+    let newSecretKey = generateKey();
 
     popupStack.title = 'Copied!';
     popupStack.content = 'Just paste it to settings.';

@@ -16,6 +16,10 @@ body {
     justify-content: space-between;
 }
 
+p {
+    line-height: 1.8em;
+}
+
 li:not(:last-child) {
     padding-bottom: 0.8em;
 }
@@ -23,6 +27,7 @@ li:not(:last-child) {
 q {
     font-style: italic;
     padding-left: 1.5em;
+    line-height: 1.8em;
 }
 
 .light:not(a) {
@@ -68,7 +73,7 @@ q {
 .masthead h2 {
     font-size: 1em;
     font-weight: 700;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
@@ -94,15 +99,15 @@ q {
 }
 
 pre {
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: .8rem 0;
+    padding: .8rem;
     display: block;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     white-space: pre;
     word-wrap: normal;
     overflow: auto !important;
-    font-size: 11px;
+    font-size: 12px;
     background-color: rgba(0, 0, 0, .05);
     border-radius: 3px;
 }
@@ -111,9 +116,13 @@ code {
     background-color: rgba(0, 0, 0, .05);
     border-radius: 3px;
     line-height: 22px;
-    font-size: 11px;
+    font-size: 12px;
     padding: 3px;
     color: #3a3a3a;
+}
+
+.dark code {
+    color: #bbb;
 }
 
 pre code {
