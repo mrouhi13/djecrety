@@ -31,8 +31,8 @@ Let's go!
 
 .. note::
 
-    By default, Djecrety try to detect your project directory and ``settings.py`` location, if ``settings.py`` not in default location you can specify the directory.
+    By default, Djecrety try to detect your project directory and ``settings.py`` location, if ``settings.py`` not in default location you can specify the directory name.
 
 .. code-block:: text
 
-    $ ./manage.py djecrety -sp
+    $ ./manage.py djecrety -d testproject
