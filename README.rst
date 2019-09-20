@@ -13,6 +13,9 @@ Djecrety
 .. image:: https://codecov.io/gh/mrouhi13/djecrety/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/mrouhi13/djecrety
 
+.. image:: https://img.shields.io/pypi/dm/djecrety   :alt: PyPI - Downloads
+  :target: https://pypistats.org/packages/djecrety
+
 Djecrety is a Django implementation of a `Web tool <https://djecrety.ir/>`_ with the same name. This package provides a command to generate a new secret key for your project and save it to ``settings.py``.
 
 For more details `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_
