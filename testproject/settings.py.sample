@@ -20,11 +20,6 @@ DEBUG = False
 # Application definition
 
 INSTALLED_APPS = [
-    # Default
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-
-    # Local
     'djecrety',
 ]
 

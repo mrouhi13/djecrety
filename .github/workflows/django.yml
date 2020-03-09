@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -28,6 +27,6 @@ jobs:
     - name: Run Tests
       run: |
         pipenv run tox -v
-    - name: Update Coverage Report
+    - name: Update CodeCov Report
       run: |
         pipenv run codecov

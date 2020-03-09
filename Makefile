@@ -24,7 +24,6 @@ init:
 setup:
 	cp testproject/settings.py.sample testproject/settings.py
 
-
 activate:
 	pipenv shell
 
