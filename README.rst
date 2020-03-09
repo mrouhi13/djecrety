@@ -2,9 +2,10 @@ Djecrety
 ========
 .. image:: https://img.shields.io/pypi/v/djecrety.svg
   :target: https://pypi.org/project/djecrety
+  :alt: PyPI - Build
 
-.. image:: https://travis-ci.org/mrouhi13/djecrety.svg?branch=master
-  :target: https://travis-ci.org/mrouhi13/djecrety
+.. image:: https://github.com/mrouhi13/djecrety/workflows/Django%20CI/badge.svg
+  :alt: Django CI
 
 .. image:: https://readthedocs.org/projects/djecrety/badge/?version=latest
   :target: https://djecrety.readthedocs.io/?badge=latest
@@ -12,6 +13,7 @@ Djecrety
 
 .. image:: https://codecov.io/gh/mrouhi13/djecrety/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/mrouhi13/djecrety
+  :alt: Code Coverage
 
 .. image:: https://img.shields.io/pypi/dm/djecrety.svg
   :target: https://pypistats.org/packages/djecrety
