@@ -6,7 +6,7 @@
 *.pot
 *.pyc
 __pycache__/
-settings.py
+local_settings.py
 db.sqlite3
 media
 
