@@ -22,7 +22,6 @@ jobs:
     - name: Install Dependencies
       run: |
         make init
-        make setup
     - name: Run Tests
       run: |
         pipenv run tox -v
