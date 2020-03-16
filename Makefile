@@ -3,7 +3,6 @@ help:
 	@echo "    make help        show this message"
 	@echo "    make build       create python package"
 	@echo "    make init        create virtual environment and install dependencies"
-	@echo "    make setup       do migrations and collect static files"
 	@echo "    make test        run the test suite"
 	@echo "    exit             leave virtual environment"
 
@@ -12,11 +11,9 @@ build:
 	twine check dist/*
 
 init:
+	pip install --upgrade pip
 	pip install pipenv
 	pipenv install --dev --three
-
-setup:
-	cp testproject/settings.py.sample testproject/settings.py
 
 test:
 	pipenv run coverage erase
