@@ -1,12 +1,12 @@
 new ClipboardJS('.clipboard');
 let bitcoinCp = new ClipboardJS('#bitcoinAddress', {
     text: function () {
-        return '1AmdLAaG9YtnMb51n5jCZZ1jV58cNEL7is'
+        return '3PHtQj4QJGPf3fKSzxfThcuUKqf9DaWWoz'
     }
 });
 let ethereumCp = new ClipboardJS('#ethereumAddress', {
     text: function () {
-        return '0x76fB3d644A937849d7b660BeDf0558C5e1d85230'
+        return '0xEd52935dEb1e9e316DC7df06D4705Bc86186ac2C'
     }
 });
 const $secretKey = $('#secretKey');
