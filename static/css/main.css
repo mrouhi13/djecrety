@@ -98,6 +98,11 @@ q {
     margin-bottom: 0;
 }
 
+.footer-item {
+    font-size: 12px !important;
+    vertical-align: middle;
+}
+
 pre {
     margin: .8rem 0;
     padding: .8rem;
