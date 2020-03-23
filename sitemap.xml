@@ -3,11 +3,14 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:xhtml="http:www.w3.org/1999/xhtml">
     <url>
         <loc>https://djecrety.ir</loc>
         <lastmod>2018-08-11</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>1.00</priority>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en"
+                    href="https://djecrety.ir"/>
     </url>
 </urlset>
