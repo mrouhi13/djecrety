@@ -20,6 +20,6 @@ activate:
 	pipenv shell
 
 test:
-	tox -v
+	pipenv run tox -v
 
 .PHONY: help activate test
