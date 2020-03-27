@@ -24,9 +24,9 @@ jobs:
         make init
     - name: Run Tests
       run: |
-        pipenv run tox -v
+        make test
     - name: Upload Code Coverage Report
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       run: |
-        pipenv run codecov
+        codecov

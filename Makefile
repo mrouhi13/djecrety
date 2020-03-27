@@ -16,9 +16,6 @@ init:
 	pipenv install --dev --three
 
 test:
-	./manage.py test
-	coverage erase
-	coverage run ./manage.py test
-	coverage report
+	tox -v
 
 .PHONY: help activate test
