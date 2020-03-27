@@ -10,6 +10,3 @@ tox = "==3.14.6"
 
 [packages]
 django = "==2.2.11"
-
-[requires]
-python_version = "3.7"
