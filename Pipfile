@@ -4,12 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-codecov = "==2.0.22"
+codecov = "==2.0.16"
+coverage = "==5.0.3"
 twine = "==3.1.1"
-tox = "==3.14.6"
+tox = "==3.14.5"
 
 [packages]
 django = "==2.2.11"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
