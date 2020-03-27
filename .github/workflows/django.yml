@@ -24,7 +24,6 @@ jobs:
         make init
     - name: Run Tests
       run: |
-        pipenv shell
         make test
     - name: Upload Code Coverage Report
       env:

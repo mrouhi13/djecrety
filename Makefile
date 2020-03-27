@@ -16,6 +16,6 @@ init:
 	pipenv install --dev --three
 
 test:
-	tox -v
+	pipenv run tox -v
 
 .PHONY: help activate test
