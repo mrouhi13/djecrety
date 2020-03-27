@@ -3,6 +3,7 @@ help:
 	@echo "    make help        show this message"
 	@echo "    make build       create python package"
 	@echo "    make init        create virtual environment and install dependencies"
+	@echo "    make activate    enter virtual environment"
 	@echo "    make test        run the test suite"
 	@echo "    exit             leave virtual environment"
 
@@ -15,7 +16,10 @@ init:
 	pip install pipenv
 	pipenv install --dev --three
 
+activate:
+	pipenv shell
+
 test:
-	pipenv run tox -v
+	tox -v
 
 .PHONY: help activate test
