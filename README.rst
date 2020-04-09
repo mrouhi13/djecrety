@@ -21,7 +21,7 @@ Djecrety
 
 Djecrety is a Django implementation of a `Web tool <https://djecrety.ir/>`_ with the same name. This package provides a command to generate a new secret key for your project and save it to ``settings.py``.
 
-For more details `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_
+For more details `https://docs.djecrety.ir <https://docs.djecrety.ir>`_
 
 Requirements
 ============
@@ -40,4 +40,4 @@ Simply install using ``pip``:
 
 Documentation
 =============
-Documentation is available on `http://djecrety.readthedocs.io <http://djecrety.readthedocs.io>`_.
+Documentation is available on `https://docs.djecrety.ir <https://docs.djecrety.ir>`_.
