@@ -11,6 +11,14 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en"
-                    href="https://djecrety.ir"/>
+                    href="https://mrouhi13.github.io/djecrety"/>
+    </url>
+    <url>
+        <loc>https://docs.djecrety.ir</loc>
+        <lastmod>2020-04-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en"
+                    href="https://djecrety.readthedocs.io"/>
     </url>
 </urlset>
