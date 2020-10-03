@@ -13,6 +13,7 @@ const $secretKey = $('#secretKey');
 const $generateBtn = $('#generate');
 const $copyBitcoin = $('#bitcoinAddress');
 const $copyEthereum = $('#ethereumAddress');
+const theme = localStorage.getItem('theme');
 const possible = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)';
 let popupStack = {
     position: 'left center',
@@ -64,14 +65,21 @@ ethereumCp.on('success', function (e) {
 });
 
 $('h1.ui.header').transition('pulse');
+if (theme && theme === 'dark')  {
+    $('.light').toggleClass('dark').removeClass('light');
+    $('#github-logo').attr('src', 'static/images/gh-mark-light.svg');
+    $('div#dark-mode').addClass('checked');
+};
 $('#dark-mode').checkbox({
     onChecked: function () {
         $('.light').toggleClass('dark').removeClass('light');
         $('#github-logo').attr('src', 'static/images/gh-mark-light.svg');
+        localStorage.setItem('theme', 'dark');        
     },
     onUnchecked: function () {
         $('.dark').toggleClass('light').removeClass('dark');
-        $('#github-logo').attr('src', 'static/images/gh-mark-dark.svg');
+        $('#github-logo').attr('src', 'static/images/gh-mark-dark.svg');        
+        localStorage.setItem('theme', 'light');        
     }
 });
 $('#policy').click(function () {
