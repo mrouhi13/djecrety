@@ -69,6 +69,7 @@ if (theme && theme === 'dark')  {
     $('.light').toggleClass('dark').removeClass('light');
     $('#github-logo').attr('src', 'static/images/gh-mark-light.svg');
     $('div#dark-mode').addClass('checked');
+    $('div#dark-mode input').attr('checked', 'checked');
 };
 $('#dark-mode').checkbox({
     onChecked: function () {
