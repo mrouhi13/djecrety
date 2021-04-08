@@ -23,7 +23,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install codecov covarage tox
+        pip install codecov coverage tox
     - name: Run Tests
       run: |
         tox -v
