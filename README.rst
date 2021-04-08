@@ -8,7 +8,7 @@ Djecrety
   :target: https://djecrety.readthedocs.io/?badge=latest
   :alt: Documentation Status
 
-.. image:: https://codecov.io/gh/mrouhi13/djecrety/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/mrouhi13/djecrety/branch/main/graph/badge.svg
   :target: https://codecov.io/gh/mrouhi13/djecrety
   :alt: Code Coverage
 
