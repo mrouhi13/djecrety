@@ -1,12 +1,12 @@
 new ClipboardJS('.clipboard');
 let bitcoinCp = new ClipboardJS('#bitcoinAddress', {
     text: function () {
-        return '3PHtQj4QJGPf3fKSzxfThcuUKqf9DaWWoz'
+        return 'bc1qw2wcu29rc75hqejsshmq0x4s697wntyanurwu9'
     }
 });
 let ethereumCp = new ClipboardJS('#ethereumAddress', {
     text: function () {
-        return '0xEd52935dEb1e9e316DC7df06D4705Bc86186ac2C'
+        return '0x04d238875e55bc5c8a6cc520fb6859fea876a94f'
     }
 });
 const $secretKey = $('#secretKey');
@@ -75,12 +75,12 @@ $('#dark-mode').checkbox({
     onChecked: function () {
         $('.light').toggleClass('dark').removeClass('light');
         $('#github-logo').attr('src', 'static/images/gh-mark-light.svg');
-        localStorage.setItem('theme', 'dark');        
+        localStorage.setItem('theme', 'dark');
     },
     onUnchecked: function () {
         $('.dark').toggleClass('light').removeClass('dark');
-        $('#github-logo').attr('src', 'static/images/gh-mark-dark.svg');        
-        localStorage.setItem('theme', 'light');        
+        $('#github-logo').attr('src', 'static/images/gh-mark-dark.svg');
+        localStorage.setItem('theme', 'light');
     }
 });
 $('#policy').click(function () {
