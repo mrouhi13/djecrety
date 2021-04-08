@@ -26,15 +26,15 @@ setup(
     author_email='mrouhi13@gmail.com',
     zip_safe=False,
     install_requires=[
-        'Django>=2.0'
+        'Django>=2.0',
     ],
     classifiers=[
         'Environment :: Console',
         'Framework :: Django',
-        'Framework :: Django :: 2.0',
-        'Framework :: Django :: 2.1',
-        'Framework :: Django :: 2.2',
+        'Framework :: Django :: 2.x',
         'Framework :: Django :: 3.0',
+        'Framework :: Django :: 3.1',
+        'Framework :: Django :: 3.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
@@ -42,8 +42,9 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Security :: Cryptography',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        'Topic :: Utilities'
-    ]
+        'Topic :: Utilities',
+    ],
 )
