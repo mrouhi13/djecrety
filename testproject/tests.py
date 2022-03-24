@@ -1,7 +1,6 @@
-from io import StringIO
-
 from django.core.management import call_command
 from django.test import TestCase
+from io import StringIO
 
 from djecrety.utils import generate_secret_key, save_to_settings
 
@@ -119,7 +118,7 @@ class SaveToSettingsTests(TestCase):
         result = save_to_settings(False, parameter_name, settings_dir_name)
         self.assertEqual(result, False)
 
-    def test_with_None_parameter_name(self):
+    def test_with_none_parameter_name(self):
         """
         Check passed parameter is empty or not.
         """
