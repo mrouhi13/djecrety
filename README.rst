@@ -28,7 +28,7 @@ Requirements
 To be able to run **Djecrety** you have to meet following requirements:
 
 - Python (3.6, 3.7, 3.8, 3.9)
-- Django (2.x, 3.x)
+- Django (2.x, 3.x, 4.0)
 
 Installation
 ============

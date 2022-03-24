@@ -18,9 +18,8 @@ Supported Django versions
 -------------------------
 
 * Django 2.x
-* Django 3.0
-* Django 3.1
-* Django 3.2
+* Django 3.x
+* Django 4.0
 
 Installation
 ------------
