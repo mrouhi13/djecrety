@@ -101,6 +101,7 @@ q {
 .footer-item {
     font-size: 12px !important;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 pre {
