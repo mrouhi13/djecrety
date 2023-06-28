@@ -29,8 +29,8 @@ def save_to_settings(value, parameter_name, settings_dir_name=''):
     settings_dir = os.path.join(settings.BASE_DIR, settings_dir_name,
                                 'settings.py')
     if not os.path.exists(settings_dir):
-        raise FileNotFoundError("Can't find `settings.py` file: "
-                                f"{settings_dir}")
+        raise FileNotFoundError(
+            f"Can't find `settings.py` file: {settings_dir}")
     return _replace_line(value, parameter_name, settings_dir)
 
 

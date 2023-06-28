@@ -104,6 +104,9 @@ q {
     cursor: pointer;
 }
 
+.footer-item:hover {
+    color: #4c4f52;
+}
 pre {
     margin: .8rem 0;
     padding: .8rem;
@@ -137,6 +140,7 @@ pre code {
     margin: 0;
 }
 
+a .link
 @media only screen and (max-width: 700px) {
     .secondary.pointing.menu .item,
     .secondary.pointing.menu .menu {

@@ -102,7 +102,7 @@ class SaveToSettingsTests(TestCase):
 
     def test_with_incorrect_parameter_name(self):
         """
-        Check passed parameter is exist or not.
+        Check passed parameter is existing or not.
         """
         parameter_name = 'TEST'
         settings_dir_name = 'testproject'

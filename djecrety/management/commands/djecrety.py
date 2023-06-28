@@ -7,7 +7,7 @@ class Command(BaseCommand):
     help = 'Generate a new secret key with 50 characters length.'
 
     @staticmethod
-    def add_arguments(parser):
+    def add_arguments(parser, **kwargs):
         parser.add_argument('-s', '--save', action='store_true',
                             help='Save the generated secret key '
                                  'to `settings.py` file.')
@@ -43,8 +43,8 @@ class Command(BaseCommand):
 
     def _print_tips(self):
         self.stdout.write(self.style.WARNING('\nRecommendation:'))
-        self.stdout.write('\t1. Keep it safe.\n\t2. Ignore `settings.py` '
-                          'file in your commits.\n\t'
+        self.stdout.write('\t1. Keep it safe.\n\t'
+                          '2. Ignore `settings.py` file in your commits.\n\t'
                           '3. Change the secret key on your deploy.\n\t'
                           '4. If you lost the secret key for any reason or\n\t'
                           '   the server got compromised change it as soon as '

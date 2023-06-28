@@ -9,17 +9,12 @@ Available Commands
 Supported Python versions
 -------------------------
 
-* Python 3.6
-* Python 3.7
-* Python 3.8
-* Python 3.9
+* Python >=3.6
 
 Supported Django versions
 -------------------------
 
-* Django 2.x
-* Django 3.x
-* Django 4.0
+* Django >=2.0
 
 Installation
 ------------
